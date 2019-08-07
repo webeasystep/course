@@ -8,7 +8,6 @@ if (isset($_SESSION['id'])) {
     die();
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
