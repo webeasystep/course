@@ -22,15 +22,15 @@
 <!--Input type hidden means the code will not be viewable on the browser-->
 <!--date()- Displays the date, Y-m-d(Year,Month, Date) H:i:s(Hour, Minute, Second) -->
 <?php
-	$cid= $_POST['cid'];
+	$comment_id= $_POST['comment_id'];
 	$user_id= $_POST['user_id'];
-	$date= $_POST['date'];
+	$comment_date= $_POST['comment_date'];
 	$message= $_POST['message'];
 			
 echo "<form method='post' action='".editComments($db)."'>
-		<input type='hidden' name='cid' value='".$cid."'>
+		<input type='hidden' name='comment_id' value='".$comment_id."'>
 		<input type='hidden' name='user_id' value='".$user_id."'>
-		<input type='hidden' name='date' value='".$date."'>
+		<input type='hidden' name='comment_date' value='".$comment_date."'>
 		<textarea name='message'> ".$message." </textarea><br>
 		<button type='submit' name='SubmitComments'> Edit </button>
 	  </form> <br>";
