@@ -54,18 +54,3 @@ function delete($id = NULL){
     file_put_contents($filename, $data);
     header('Location: '.'index.php');
 }
-
-
-
-/* Summary
- *  using functions to organize
- *  why read doesn't work ? == you need return
- * Using Get to handle delete and handle get with isset function
- * header function to redirect
-
-*/
-/* resources
-*/
-/* quiz
-how to Make $size_recommendation = -1 using type casting ?
-*/

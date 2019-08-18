@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>quote of the day</title>
+    <title>Quote of the day</title>
 </head>
 <body>
 <?php

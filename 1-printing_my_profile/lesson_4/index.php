@@ -84,15 +84,3 @@
         Logical (or Relational) Operators
         Assignment Operators
  */
-
-/* Summary
- *  functions create - call -params - return
- *  scope meaning - execution order
- *  switch - comparison operators
- *
-*/
-/* resources
-*/
-/* quiz
-how to Make $size_recommendation = -1 using type casting ?
-*/

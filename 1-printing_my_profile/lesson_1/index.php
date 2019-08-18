@@ -36,16 +36,4 @@ echo "Name: $name age:$age tall:$tall languages: $languages_1 - $languages_2 - $
 echo 'name'. $name;
 ///////////////////////////////////////////////////////////
 
-/* Summary
- * printing - variables - constants - Assignment operator
- * concatenations - qutations (single - double)
- * data types (integar -float - string -boolean - NULL)
- * combine two strings in PHP
- * write comments in PHP
-*/
-/* resources
-*/
-//quiz
-// google it
-// can we define var before use it ?
-// how to solve define before use variable (USE NULL)
+

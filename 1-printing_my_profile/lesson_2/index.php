@@ -66,15 +66,4 @@ foreach ($favorites as $key =>$value) {
 echo "Name: $name </br> Age:$age </br> Tall:$tall </br> is_married:$is_married </br> Languages: $lang_str </br>  Favorites:  $fav_str";
 
 
-/* Summary
- *  Indexed array - Associative array
- *  define - set value - change value
- *  foreach loop + assignment operator - print array
- *  print mix html with $variable
- *  white space from a string
-
- resources
-
- quiz */
-
 
