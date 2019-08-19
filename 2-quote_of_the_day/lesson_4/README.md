@@ -7,11 +7,7 @@
  * issue with handle upload files with 100000 + issue with adding date
 
 # Resources
-- Printing - variables - constants - Assignment operator
-- Concatenations - quotations (single - double)
-- Data types (integer -float - string -boolean - NULL)
-- Combine two strings in PHP
-- Write comments in PHP
+
 
 # Quiz
 - how to use header with $_GET to show error message

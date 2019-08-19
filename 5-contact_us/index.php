@@ -1,3 +1,5 @@
+<?php
+session_start(); ?>
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -8,7 +10,7 @@
     <h4>Contact us today, and get reply with in 24 hours!</h4>
     <fieldset>
       <input placeholder="Full Name" type="text" name="name" tabindex="1" required autofocus>
-        <p><?php if (isset($name_error)) echo $name_error; ?></p>
+        <p><?php if (isset($_SESSION['name_error'])) echo $_SESSION['name_error']; ?></p>
     </fieldset>
     <fieldset>
       <input placeholder="Email Address" type="email" name="email" tabindex="2" required>
