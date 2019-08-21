@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Pagination with PHP</title>
-
-    <!-- Load file bootstrap.min.css yang ada di folder css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         .align-middle {
             vertical-align: middle !important;
@@ -28,14 +28,14 @@
             <table class="table table-bordered table-striped table-hover">
                 <tr>
                     <th class="text-center">NO</th>
-                    <th> NIS </th>
-                    <th> TYPE OF SEX </th>
-                    <th> TELP </th>
-                    <th> ADDRESS </th>
+                    <th>NIS</th>
+                    <th>TYPE OF SEX</th>
+                    <th>TEL</th>
+                    <th>ADDRESS</th>
                 </tr>
                 <?php
-                // Include / load file connection.php
-                include "connection.php";
+                // Include / load file db.php
+                include "db.php";
                 // Check whether there is data on the page URL
                 $page = (isset($_GET['page'])) ? $_GET['page'] : 1;
 
@@ -53,12 +53,12 @@
 
                 ?>
                     <tr>
-                        <td class="align-middle text-center"><?php echo $no; ?></td>
-                        <td class="align-middle"><?php echo $data['nis']; ?></td>
-                        <td class="align-middle"><?php echo $data['nama']; ?></td>
-                        <td class="align-middle"><?php echo $data['jenis_kelamin']; ?></td>
-                        <td class="align-middle"><?php echo $data['telp']; ?></td>
-                        <td class="align-middle"><?php echo $data['alamat']; ?></td>
+                        <td class="align-middle text-center"> <?php echo $no; ?> </td>
+                         <td class="align-middle"> <?php echo $data['nis']; ?> </td>
+                         <td class="align-middle"> <?php echo $data['name']; ?> </td>
+                         <td class="align-middle"> <?php echo $data['gender']; ?> </td>
+                         <td class="align-middle"> <?php echo $data['tel']; ?> </td>
+                         <td class="align-middle"> <?php echo $data['address']; ?> </td>
                     </tr>
                 <?php
                 $no++; // Add 1 for each looping
@@ -68,9 +68,8 @@
         <div>
 
         <!--
-        Make the pagination
-         With bootstrap, we make it easy to make pagination buttons with a design
-         good course ->
+        Make the pagination  With bootstrap, we make it easy to make pagination buttons with a design
+         good course -->
         <ul class="pagination">
             <!-- LINK FIRST AND PREV -->
             <?php
@@ -79,7 +78,7 @@
                 <li class="disabled"><a href="#">First</a></li>
                 <li class="disabled"><a href="#">&laquo;</a></li>
             <?php
-            } else { // Jika buka page ke 1
+            } else { // If you open page 1
                 $link_prev = ($page > 1) ? $page - 1 : 1;
             ?>
                 <li><a href="index.php?page=1">First</a></li>
@@ -91,7 +90,7 @@
             <!-- LINK NUMBER -->
             <?php
             // Create a query to count all amounts of data
-            $sql2 = $pdo->prepare("SELECT COUNT(*) AS total FROM siswa");
+            $sql2 = $pdo->prepare("SELECT COUNT(*) AS total FROM student");
             $sql2->execute(); // Execute the query
             $get_total = $sql2->fetch();
 
@@ -117,7 +116,7 @@
                 <li class="disabled"><a href="#">&raquo;</a></li>
                 <li class="disabled"><a href="#">Last</a></li>
             <?php
-            } else { // Jika bukan page terakhir
+            } else { // If not the last page
                 $link_next = ($page < $total_page) ? $page + 1 : $total_page;
             ?>
                 <li><a href="index.php?page=<?php echo $link_next; ?>">&raquo;</a></li>
