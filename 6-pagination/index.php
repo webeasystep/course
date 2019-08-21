@@ -29,7 +29,8 @@
                 <tr>
                     <th class="text-center">NO</th>
                     <th>NIS</th>
-                    <th>TYPE OF SEX</th>
+                    <th>NAME</th>
+                    <th>GENDER</th>
                     <th>TEL</th>
                     <th>ADDRESS</th>
                 </tr>
@@ -45,8 +46,10 @@
                  $limit_start = ($page - 1) * $limit;
 
                  // Create a query to display student data according to the specified limit
-                 $sql = $pdo->prepare ("SELECT * FROM student LIMIT". $limit_start. ",". $limit);
-                 $sql->execute (); // Execute the query
+                 $sql = $pdo->prepare ("SELECT * FROM student LIMIT  $limit_start , $limit  " );
+
+                $sql->execute (); // Execute the query
+               // $sql->debugDumpParams();
 
                  $no = $limit_start + 1; // For table numbering
                  while ($data = $sql->fetch ()) {// Get all data from the results of the execution of $sql

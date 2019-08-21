@@ -5,5 +5,11 @@ $password = ''; // Password (Fill in if using a password)
 $database = 'demo'; // The name of the database
 
 // Connection to MySQL with PDO
-$pdo = new PDO('mysql:host='.$host.';dbname='.$database, $username, $password);
+
+try {
+    $pdo = new PDO('mysql:host='.$host.';dbname='.$database, $username, $password);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
 
