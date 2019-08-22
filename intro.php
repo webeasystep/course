@@ -17,4 +17,4 @@
 // concat line by line
 // google it and quiz about more advanced solution (chooses - upload answer )
 // before start chapters read the course map tree
-// using cookie // using for loop
+// using cookie // using for loop // Error Reporting // date_and_time
