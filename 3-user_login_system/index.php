@@ -1,5 +1,6 @@
 <?php
 require_once 'config.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,8 +13,6 @@ require_once 'config.php';
 <body>
 <div class="container">
     <div class="jumbotron">
-        <h1>Welcome <?php echo $username; ?>.</h1>
-        <p> Your user Id is <?php echo $userId; ?>.</p>
         Welcome! You have successfully logged in. Thank you.
         <a href="<?php echo WEB_ROOT; ?>logout.php" onclick="return confirm('Are you sure want to logout?')">Logout</a>
     </div>

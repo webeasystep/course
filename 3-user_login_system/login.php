@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 
     if (empty($temp)) {
         $_POST['password'] = '';
-        $_POST['email'] = '';
+        $_POST['username'] = '';
         //$clss = 'success';
         $result = user_login($username, $password);
         $errors .= $result;

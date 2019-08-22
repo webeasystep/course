@@ -1,9 +1,10 @@
 <?php
 
-function check_login() {
+function check_login()
+{
     /* Check if user has been remembered */
     if (isset($_COOKIE['cookname'])) {
-        $_SESSION['user_name'] = $_COOKIE['cookname'];
+        $_SESSION['username'] = $_COOKIE['cookname'];
     }
 
     if (isset($_COOKIE['cookpass'])) {
@@ -15,17 +16,17 @@ function check_login() {
     }
 
     /* Username and password have been set */
-    if (isset($_SESSION['user_name']) && isset($_SESSION['user_pass'])) {
+    if (isset($_SESSION['username']) && isset($_SESSION['user_pass'])) {
         /* Confirm that username and password are valid */
-        if (confirm_user($_SESSION['user_name'], $_SESSION['user_pass']) === FALSE) {
+        if (confirm_user($_SESSION['username'], $_SESSION['user_pass']) === FALSE) {
             /* Variables are incorrect, user not logged in */
-            unset($_SESSION['user_name']);
+            unset($_SESSION['username']);
             unset($_SESSION['user_pass']);
             unset($_SESSION['user_rem']);
             return FALSE;
         }
-        $row = dbFetchAssoc(confirm_user($_SESSION['user_name'], $_SESSION['user_pass']));
-        $_SESSION['user_id'] = $row['account_id'];
+        $row = dbFetchAssoc(confirm_user($_SESSION['username'], $_SESSION['user_pass']));
+        $_SESSION['user_id'] = $row['id'];
         $_SESSION['last_login'] = $row['last_login'];
         return TRUE;
     } else {/* User not logged in */
@@ -34,20 +35,21 @@ function check_login() {
 }
 
 //user login
-function user_login($username, $password) {
+function user_login($username, $password)
+{
     if (user_exists($username) == FALSE) {
         return "You are not a registered member";
     } else if (confirm_user($username, md5($password)) === FALSE) {
         return "Authentication error";
     } else {
-        $_SESSION['user_name'] = $username;
+        $_SESSION['username'] = $username;
         $_SESSION['user_pass'] = $password;
         $row = dbFetchAssoc(confirm_user($username, md5($password)));
-        $_SESSION['user_id'] = $row['account_id'];
+        $_SESSION['user_id'] = $row['id'];
         $_SESSION['last_login'] = $row['last_login'];
         if (isset($_POST['remember_me'])) {
             $_SESSION['user_rem'] = $_POST['remember_me'];
-            setcookie("cookname", $_SESSION['user_name'], time() + 60 * 60 * 24 * COOKIE_TIME_OUT);
+            setcookie("cookname", $_SESSION['username'], time() + 60 * 60 * 24 * COOKIE_TIME_OUT);
             setcookie("cookpass", $_SESSION['user_pass'], time() + 60 * 60 * 24 * COOKIE_TIME_OUT);
             setcookie("cookrem", $_SESSION['user_rem'], time() + 60 * 60 * 24 * COOKIE_TIME_OUT);
         } else {
@@ -58,21 +60,19 @@ function user_login($username, $password) {
         }
 
         //Login history
-        $sql = "UPDATE user_account
-                SET last_login=now()
-                WHERE account_login='" . $username . "'";
+        $sql = "UPDATE users  SET last_login= NOW()  WHERE username='" . $username . "'";
 
         dbQuery($sql);
 
-        header('Location:' . WEB_ROOT . 'home.php');
+        header('Location:' . WEB_ROOT . 'index.php');
         exit;
     }
 }
 
-function user_exists($username) {
-    $sql = "SELECT ua.account_login,ua.user_name,ua.last_login
-            FROM user_account ua
-            WHERE (ua.account_login='$username' OR ua.user_email='$username')"
+function user_exists($username)
+{
+    $sql = "SELECT ua.username,ua.username,ua.last_login FROM users ua
+            WHERE ua.username='$username'"
         . " LIMIT 1";
 
     $result = dbQuery($sql);
@@ -84,13 +84,13 @@ function user_exists($username) {
     return $result;
 }
 
-function confirm_user($username, $password) {
+function confirm_user($username, $password)
+{
 
     /* Verify that user is in database */
-    $sql = "SELECT ua.account_login,ua.user_name,ua.last_login
-            FROM user_account ua
-            WHERE (ua.account_login='$username' OR ua.user_email='$username')
-                AND ua.account_password='$password' LIMIT 1";
+    $sql = "SELECT ua.username,ua.username,ua.last_login FROM users ua
+            WHERE ua.username='$username'
+                AND ua.password='$password' LIMIT 1";
 
     $result = dbQuery($sql);
 
@@ -102,7 +102,8 @@ function confirm_user($username, $password) {
 }
 
 //do user logout
-function user_logout() {
+function user_logout()
+{
     session_start();
     $_SESSION = array(); // reset session array
     session_destroy();   // destroy session.
