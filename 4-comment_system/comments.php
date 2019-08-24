@@ -53,7 +53,7 @@ function getComments($db)
 					<input type='hidden' name='comment_id' value='" . $row['comment_id'] . "'>
 					<button name='commentDelete'> Delete </button>
 				</form>
-				<form class= 'edit-form' method ='POST' action = 'editcomment.php'>
+				<form class= 'edit-form' method ='POST' action = 'edit_comment.php'>
 					<input type='hidden' name='comment_id' value='" . $row['comment_id'] . "'>
 					<input type='hidden' name='user_id' value='" . $row['user_id'] . "'>
 					<input type='hidden' name='comment_date' value='" . $row['comment_date'] . "'>

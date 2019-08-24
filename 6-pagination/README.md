@@ -1,13 +1,15 @@
-![Alt text](screenshot.jpg?raw=true "PHP Pagination")
 
-# PHP Pagination
-Make paging with PHP MySQL & use Bootstrap.
+# Summary
+ * Working with PDO extension
+ * using query string from the url to get values
+ * using for loop
+ * using COUNT and dynamic query with mysql
+ * using ternary operator = short if
 
-# How to install
-- Download this repository
-- Extract it to `C: / xampp / htdocs /`
-- Rename the folder to `pagination`
-- Create a `pagination` database
-- Import `pagination.sql`
-- Database settings in `connection.php`
-- Open `localhost / pagination`
+# Resources
+
+
+# Quiz
+
+
+
