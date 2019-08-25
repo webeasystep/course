@@ -12,7 +12,7 @@
 				<!-- TITLE -->
 		  		<div class="panel-heading">
 		    		<h3 class="panel-title">
-		    			<a href=<?php echo "post.php?id="; echo $id; ?> ><?php echo $title; ?></a>
+		    			<a href=<?php echo "view_post.php?id="; echo $id; ?> ><?php echo $title; ?></a>
 		    		</h3>
 		  		</div>
 
@@ -20,8 +20,8 @@
 		  		<div class="panel-body">
 						<?php
 							/*
-		    			if($shortpost==1) {
-									echo truncate($desc , "post.php" , "id" , $id);
+		    			if($short_post==1) {
+									echo truncate($desc , "view_post.php" , "id" , $id);
 							} else {
 								echo $desc;
 							}*/
@@ -40,7 +40,7 @@
 
 					<span class="col-sm-2">
 							<span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
-			  			<a href=<?php echo "post.php?tags="; echo $tags; ?> >
+			  			<a href=<?php echo "view_post.php?tags="; echo $tags; ?> >
 									<?php echo $tags;?>
 			  			</a>
 					</span>
@@ -62,12 +62,12 @@
 
 
 			  			<?php
-			  				$delete_post_link='../posts/delete_post.php?postid='.$id;
-							if(isset($_SESSION['username']) ) {
-								if($_SESSION['username']==$author || $_SESSION['usertype']=='admin') {
+			  				$delete_post_link='../posts/delete_post.php?post_id='.$id;
+							if(isset($_SESSION['user_name']) ) {
+								if($_SESSION['user_name']==$author || $_SESSION['user_type']=='admin') {
 									echo "
 									<span class='pull-right'>
-									<a href='update.php?id=$id'  type=\"button\" class=\"btn btn-sm btn-default\">
+									<a href='update_post.php?id=$id'  type=\"button\" class=\"btn btn-sm btn-default\">
 										<i class=\"glyphicon glyphicon-edit\"></i>
 									</a>
 
@@ -86,8 +86,8 @@
 			<?php
 					if(isset($_REQUEST['id'])) {
 							include("../posts/comments.php");
-							if(isset($_SESSION['username']))
-									include("../include/commentform.php");
+							if(isset($_SESSION['user_name']))
+									include("../include/comment_form.php");
 					}
 			?>
 

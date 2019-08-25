@@ -1,5 +1,5 @@
 <?php
-$username=$_SESSION['username'];
+$user_name=$_SESSION['user_name'];
 ?>
 
 <ul class="nav navbar-nav">
@@ -9,8 +9,8 @@ $username=$_SESSION['username'];
 		 </li>
 
         <li>
-        	<a href=<?php echo $profile_url; echo "?user=".$username; ?> >
-        		Hello <?php echo "$username" ?>
+        	<a href=<?php echo $profile_url; echo "?user=".$user_name; ?> >
+        		Hello <?php echo "$user_name" ?>
         	</a>
         </li>
 

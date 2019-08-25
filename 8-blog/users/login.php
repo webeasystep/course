@@ -6,12 +6,12 @@ include("../include/url_users.php");
 
 if(isset($_POST['submit'])) {
 
-	$username=$_POST['username'];
+	$user_name=$_POST['user_name'];
 	$password=$_POST['password'];
 
 
 	/* Check login  correctness*/
-	$query="SELECT * FROM users WHERE username='$username' AND password='$password' ";
+	$query="SELECT * FROM users WHERE user_name='$user_name' AND password='$password' ";
 	$result=mysqli_query($conn , $query);
 	//$rows=1;
 
@@ -22,11 +22,11 @@ if(isset($_POST['submit'])) {
 	}
 
 	if(mysqli_num_rows($result) == 1) {
-		$_SESSION['username']=$username;
+		$_SESSION['user_name']=$user_name;
 		$_SESSION['password']=$password;
 		/* user type */
 		$detail=mysqli_fetch_assoc($result);
-		$_SESSION['usertype']=$detail['usertype'];
+		$_SESSION['user_type']=$detail['user_type'];
 
 		/* Redirect to current / previous page*/
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -41,7 +41,7 @@ if(isset($_POST['submit'])) {
 		";
 	}
 } else {
-			if(!isset($_SESSION['username'])) {
+			if(!isset($_SESSION['user_name'])) {
 			echo "
 			<div class=\"alert alert-danger\" role=\"alert\">
 		  <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span>

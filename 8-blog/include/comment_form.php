@@ -5,10 +5,10 @@
         include("../db/dbconnect.php");
 
         $id=$_REQUEST['id'];
-        $desc=$_POST['commentDesc'];
-        $author=$_SESSION['username'];
+        $desc=$_POST['comment_desc'];
+        $author=$_SESSION['user_name'];
 
-        $query="INSERT INTO comments (postID , commentDesc , commentAuthor )
+        $query="INSERT INTO comments (post_id , comment_desc , comment_author )
                 VALUES ('$id' , '$desc' , '$author')
                 ";
 
@@ -24,11 +24,11 @@
 
 <div class="panel-footer">
 
-    <form  role="form" action=<?php echo "../include/commentform.php?id=".$_REQUEST['id'];?> method="post" >
+    <form  role="form" action=<?php echo "../include/comment_form.php?id=".$_REQUEST['id'];?> method="post" >
 
       <div class="form-group">
         <div>
-          <textarea class="form-control" id="commentDesc" placeholder="Comment here..." name="commentDesc">
+          <textarea class="form-control" id="comment_desc" placeholder="Comment here..." name="comment_desc">
           </textarea>
         </div>
       </div>

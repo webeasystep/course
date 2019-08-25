@@ -2,19 +2,17 @@
 /* Authenticate user */
 include("../db/dbconnect.php");
 
-/* Redirect if postid is not set */
+/* Redirect if post_id is not set */
 if(!isset($_REQUEST['id'])) {
 	 header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
-	$postid=$_REQUEST['id'];
+	$post_id=$_REQUEST['id'];
 }
 
-echo $postid;
+echo $post_id;
 
 /* delete from table posts */
-$query="DELETE FROM posts_buffer
-		WHERE postID='$postid'
-		";
+$query="DELETE FROM posts_buffer WHERE post_id='$post_id' ";
 
 $result=mysqli_query($conn , $query);
 

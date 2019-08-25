@@ -1,6 +1,6 @@
 <form class="navbar-form navbar-left" action=<?php echo $login_url; ?> method="POST">
         <div class="form-group">
-          	<input type="text" class="form-control" placeholder="Username" name="username">
+          	<input type="text" class="form-control" placeholder="Username" name="user_name">
         </div>
         <div class="form-group">
           	<input type="password" class="form-control" placeholder="Password" name="password">

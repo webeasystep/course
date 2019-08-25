@@ -8,8 +8,7 @@ include("../include/url_users.php");
         $email=$_POST['email'];
         $msg=$_POST['message'];
 
-          $query="INSERT INTO messages (name , email , message )
-          VALUES (' $name' , '$email' , '$msg' )";
+        $query="INSERT INTO messages (name , email , message ) VALUES (' $name' , '$email' , '$msg' )";
 
           $result=mysqli_query($conn , $query);
 

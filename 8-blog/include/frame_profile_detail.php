@@ -20,15 +20,15 @@
                     <tbody>
                       <tr>
                         <td>Name</td>
-                        <td><?php echo $row['firstname']; ?></td>
+                        <td><?php echo $row['first_name']; ?></td>
                       </tr>
                       <tr>
                         <td>User Handle</td>
-                        <td><?php echo $row['username']; ?></td>
+                        <td><?php echo $row['user_name']; ?></td>
                       </tr>
                         <tr>
                           <td>Email</td>
-                          <td><?php echo $row['emailid']; ?></td>
+                          <td><?php echo $row['email']; ?></td>
                         </tr>
 
                       </tr>
@@ -36,7 +36,7 @@
                     </tbody>
                   </table>
 
-                  <a href=<?php echo "../posts/post.php?user=".$_REQUEST['user']; ?> class="btn btn-default">My Posts</a>
+                  <a href=<?php echo "../posts/view_post.php?user=".$_REQUEST['user']; ?> class="btn btn-default">My Posts</a>
 
                 </div>
               </div>
@@ -46,7 +46,7 @@
                         <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                         <span class="pull-right">
                             <a href="" type="button" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a href=<?php echo "../users/delete_user.php?user=".$row['username']; ?>  type=\"button\" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href=<?php echo "../users/delete_user.php?user=".$row['user_name']; ?>  type=\"button\" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                   </div>
                 -->

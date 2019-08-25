@@ -7,9 +7,9 @@ Stores URLs that will need to include in post folder's files
 session_start();
 $index_url='../index.php';
 $posts_url='posts.php';
-$top_posts_url='../posts/topposts.php';
-$post_url='post.php';
-$newpost_url='newpost.php';
+$top_posts_url='../posts/top_posts.php';
+$post_url='view_post.php';
+$newpost_url='create_post.php';
 $login_url='../users/login.php';
 $register_url='../users/register.php';
 $logout_url='../users/logout.php';

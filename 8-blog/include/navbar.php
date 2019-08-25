@@ -38,11 +38,11 @@
       <ul class="nav navbar-nav navbar-right">
 
        <?php
-            if(!isset($_SESSION['username'])) {
-                include("loginform.php");
+            if(!isset($_SESSION['user_name'])) {
+                include("login_form.php");
               }
             else {
-                include("userdetail.php");
+                include("user_details.php");
               }
        ?>
 

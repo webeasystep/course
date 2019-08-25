@@ -27,10 +27,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
-  `postID` int(11) NOT NULL,
-  `commentID` int(11) NOT NULL,
-  `commentDesc` varchar(500) NOT NULL,
-  `commentAuthor` varchar(500) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `comment_id` int(11) NOT NULL,
+  `comment_desc` varchar(500) NOT NULL,
+  `comment_author` varchar(500) NOT NULL,
   `commentTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`postID`, `commentID`, `commentDesc`, `commentAuthor`, `commentTime`) VALUES
+INSERT INTO `comments` (`post_id`, `comment_id`, `comment_desc`, `comment_author`, `commentTime`) VALUES
 (2, 3, 'yuppy', 'qt', '2015-08-22 12:36:50'),
 (2, 4, 'nice :-)', 'qt', '2015-08-22 12:36:59'),
 (2, 5, 'nice op you are great !!', 'qt', '2015-08-22 12:37:21'),
@@ -84,19 +84,19 @@ INSERT INTO `messages` (`id`, `name`, `email`, `message`, `time`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `posts` (
-  `postID` int(11) NOT NULL,
-  `postTitle` varchar(200) NOT NULL,
-  `postDesc` varchar(10000) NOT NULL,
-  `postTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `postTag` varchar(40) NOT NULL,
-  `postAuthor` varchar(40) NOT NULL
+  `post_id` int(11) NOT NULL,
+  `post_title` varchar(200) NOT NULL,
+  `post_desc` varchar(10000) NOT NULL,
+  `post_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `post_tag` varchar(40) NOT NULL,
+  `post_author` varchar(40) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`postID`, `postTitle`, `postDesc`, `postTime`, `postTag`, `postAuthor`) VALUES
+INSERT INTO `posts` (`post_id`, `post_title`, `post_desc`, `post_time`, `post_tag`, `post_author`) VALUES
 (2, 'op', 'op', '2015-08-12 09:51:46', 'dp', 'sai'),
 (5, 'Hello', '<p>Recently I made one&nbsp;one blog expcode.wordpress.com. <img alt="enlightened" src="http://localhost/Blog/ckeditor/plugins/smiley/images/lightbulb.png" style="height:23px; width:23px" title="enlightened" /></p>\r\n\r\n<p>Follow and contribute . <img alt="blush" src="http://localhost/Blog/ckeditor/plugins/smiley/images/embarrassed_smile.png" style="height:23px; width:23px" title="blush" /></p>\r\n\r\n<p>Thanks</p>\r\n', '2015-08-21 14:24:13', 'blog', 'expcode'),
 (6, 'ACM NIT Surat', '<p>Sardar Vallabhbhai National Institute Of Technology, Surat is one of the 17 Regional Engineering Colleges that were established as joint venture of the Government of India and the Government of Gujarat. It was established in June 1961 with facilities to run Bachelor&#39;s Degree Programmes in Civil, Electrical and Mechanical Engineering disciplines. It is now changed to National Institute of Technology along with other RECs.&nbsp;<br />\r\n<br />\r\nThe college has now been given the status of Deemed University.&nbsp;<br />\r\n<br />\r\nThe college has well-established Central Learning resource centers like Central library, Central Computer Centre, Entrepreneurship Development Cell, Continuing Education Centre and Physical Education Section. The college also has a very active Training &amp; Placement section.&nbsp;<br />\r\n<br />\r\nThe college has a campus of its own, spread over 100 hectares of land on the Surat-Dumas Highway. The college is progressing with the construction of the buildings of the academic sector. The college is having in all seven hostels, six for boys &amp; one for girls students, accommodating 990 students. The total of 191 units of staff quarters for different categories have been built on the campus. The college has a Canteen, a Students Store, a Dispensary, a Guest House, a Post Office, a branch of the State Bank of India and play ground for some of the major games, viz. Football, Basketball, Volleyball and Cricket.</p>\r\n', '2015-08-22 09:55:25', 'acm', 'qt'),
@@ -110,12 +110,12 @@ INSERT INTO `posts` (`postID`, `postTitle`, `postDesc`, `postTime`, `postTag`, `
 --
 
 CREATE TABLE IF NOT EXISTS `posts_buffer` (
-  `postID` int(11) NOT NULL,
-  `postTitle` varchar(100) NOT NULL,
-  `postDesc` varchar(5000) NOT NULL,
-  `postTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `postTag` varchar(20) NOT NULL,
-  `postAuthor` varchar(20) NOT NULL
+  `post_id` int(11) NOT NULL,
+  `post_title` varchar(100) NOT NULL,
+  `post_desc` varchar(5000) NOT NULL,
+  `post_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `post_tag` varchar(20) NOT NULL,
+  `post_author` varchar(20) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -126,19 +126,19 @@ CREATE TABLE IF NOT EXISTS `posts_buffer` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(40) NOT NULL,
-  `firstname` varchar(40) NOT NULL,
+  `user_name` varchar(40) NOT NULL,
+  `first_name` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `emailid` varchar(40) NOT NULL,
-  `createdon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `usertype` varchar(50) NOT NULL DEFAULT 'normal'
+  `email` varchar(40) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `user_type` varchar(50) NOT NULL DEFAULT 'normal'
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `firstname`, `password`, `emailid`, `createdon`, `usertype`) VALUES
+INSERT INTO `users` (`id`, `user_name`, `first_name`, `password`, `email`, `created_at`, `user_type`) VALUES
 (1, 'qt', 'Rajan Kasodariya', 'qt', 'qt@gmail.com', '2015-08-19 12:57:02', 'normal'),
 (2, 'rtkasodariya', 'Rajan', '123', '123@gmail.com', '2015-08-12 18:00:05', 'normal'),
 (5, 'expcode', 'Expert Code', 'rajan', 'expcode@gmail.com', '2015-08-21 14:01:26', 'normal'),
@@ -152,12 +152,12 @@ INSERT INTO `users` (`id`, `username`, `firstname`, `password`, `emailid`, `crea
 
 CREATE TABLE IF NOT EXISTS `users_buffer` (
   `id` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `firstname` varchar(40) NOT NULL,
+  `user_name` varchar(20) NOT NULL,
+  `first_name` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
-  `emailid` varchar(40) NOT NULL,
-  `createdon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `usertype` varchar(20) NOT NULL DEFAULT 'nornal'
+  `email` varchar(40) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_type` varchar(20) NOT NULL DEFAULT 'nornal'
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -167,19 +167,19 @@ CREATE TABLE IF NOT EXISTS `users_buffer` (
 --
 
 CREATE TABLE IF NOT EXISTS `user_post` (
-  `postAuthor` varchar(40) NOT NULL,
-  `postID` int(11) NOT NULL,
-  `postLikes` int(11) NOT NULL DEFAULT '0',
-  `postDisLikes` int(11) NOT NULL,
-  `postComments` int(11) NOT NULL DEFAULT '0',
-  `postViews` int(11) NOT NULL DEFAULT '0'
+  `post_author` varchar(40) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  `post_likes` int(11) NOT NULL DEFAULT '0',
+  `post_dislikes` int(11) NOT NULL,
+  `post_comments` int(11) NOT NULL DEFAULT '0',
+  `post_views` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='User and Post relation Table';
 
 --
 -- Dumping data for table `user_post`
 --
 
-INSERT INTO `user_post` (`postAuthor`, `postID`, `postLikes`, `postDisLikes`, `postComments`, `postViews`) VALUES
+INSERT INTO `user_post` (`post_author`, `post_id`, `post_likes`, `post_dislikes`, `post_comments`, `post_views`) VALUES
 ('qt', 1, 4, 0, 0, 20),
 ('sai', 2, 0, 0, 0, 7),
 ('expcode', 5, 0, 0, 0, 48),
@@ -195,7 +195,7 @@ INSERT INTO `user_post` (`postAuthor`, `postID`, `postLikes`, `postDisLikes`, `p
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
-  ADD UNIQUE KEY `commentID` (`commentID`);
+  ADD UNIQUE KEY `comment_id` (`comment_id`);
 
 --
 -- Indexes for table `messages`
@@ -207,35 +207,35 @@ ALTER TABLE `messages`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`postID`),
-  ADD UNIQUE KEY `postTitle` (`postTitle`);
+  ADD PRIMARY KEY (`post_id`),
+  ADD UNIQUE KEY `post_title` (`post_title`);
 
 --
 -- Indexes for table `posts_buffer`
 --
 ALTER TABLE `posts_buffer`
-  ADD PRIMARY KEY (`postID`);
+  ADD PRIMARY KEY (`post_id`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `user_name` (`user_name`);
 
 --
 -- Indexes for table `users_buffer`
 --
 ALTER TABLE `users_buffer`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`,`emailid`);
+  ADD UNIQUE KEY `user_name` (`user_name`,`email`);
 
 --
 -- Indexes for table `user_post`
 --
 ALTER TABLE `user_post`
-  ADD PRIMARY KEY (`postID`),
-  ADD UNIQUE KEY `postID` (`postID`);
+  ADD PRIMARY KEY (`post_id`),
+  ADD UNIQUE KEY `post_id` (`post_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -245,7 +245,7 @@ ALTER TABLE `user_post`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `commentID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `messages`
 --
@@ -255,12 +255,12 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `postID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `posts_buffer`
 --
 ALTER TABLE `posts_buffer`
-  MODIFY `postID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --

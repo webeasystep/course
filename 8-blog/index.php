@@ -12,9 +12,9 @@ height: 500px;
 <?php
 $index_url='index.php';
 $posts_url='posts/posts.php';
-$top_posts_url='posts/topposts.php';
-$post_url='posts/post.php';
-$newpost_url='posts/newpost.php';
+$top_posts_url='posts/top_posts.php';
+$post_url='posts/view_post.php';
+$newpost_url='posts/create_post.php';
 $login_url='users/login.php';
 $logout_url='users/logout.php';
 $register_url='users/register.php';
@@ -26,7 +26,7 @@ session_start();
 include("include/navbar.php");
 include("include/bootstrap_cdn.php");
 
-if(isset($_SESSION['username'])) {
+if(isset($_SESSION['user_name'])) {
 	header("location:posts/posts.php");
 }
 

@@ -1,47 +1,40 @@
 <?php
 
-include("../include/url_posts.php");
-
+include("../include/url_users.php");
 
 /* If not logged in then redirect to login page */
-if(!isset($_SESSION['username']))
+if(!isset($_SESSION['user_name']))
 {
-	header("location:../users/login.php");
+	header("location:login.php");
 }
 
 if(isset($_POST['submit'])) {
 
-	$postTitle=$_POST['postTitle'];
-	$postDesc=$_POST['postDesc'];
-	$postTag=$_POST['postTag'];
-	$postAuthor=$_SESSION['username'];
+	$postTitle=$_POST['title'];
+	$post_desc=$_POST['description'];
+	$post_tag=$_POST['tag'];
+	$post_author=$_SESSION['user_name'];
 
 	include("../db/dbconnect.php");
 
 	/* CHECK if same user or email exists or not ? */
-	$query="INSERT INTO posts_buffer (postTitle , postDesc , postTag , postAuthor)
-			VALUES ('$postTitle' , '$postDesc' , '$postTag' , '$postAuthor') ";
+	$query="INSERT INTO posts (postTitle , post_desc , post_tag , post_author)
+			VALUES ('$postTitle' , '$post_desc' , '$post_tag' , '$post_author') ";
 	mysqli_query($conn , $query);
 
 	printf("Successfully posted your post\n");
-	header("location:posts.php");
-
 }
 
 /* * * * * POST Form * * * * */
 else {
-	/*
 	echo "
-		<form action='newpost.php' method='POST' >
+		<form action='create_post.php' method='POST' >
 			Title : <input type='text' name='title'></br>
 			Description : <input type='text' name='description'></br>
 			Tags : <input type='text' name='tag'></br>
 			<input type='submit' name='submit' value='Publish'></br>
 		</form>
-	";*/
-
-	include("../include/frame_newpost.php");
-
+	";
 }
 
 

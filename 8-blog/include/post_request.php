@@ -1,13 +1,13 @@
 <?php
 
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['user_name'])){
 	header('Location:../index.php');
 }
-else if($_SESSION['usertype']!='admin') {
+else if($_SESSION['user_type']!='admin') {
   header('Location:../index.php');
 }
 else {
-	$user=$_SESSION['username'];
+	$user=$_SESSION['user_name'];
 }
 
 /* fetch user detail */

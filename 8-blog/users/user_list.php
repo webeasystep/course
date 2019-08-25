@@ -1,13 +1,13 @@
 <?php
 
-if(!isset($_SESSION['username'])){
+if(!isset($_SESSION['user_name'])){
 	header('Location:../index.php');
 }
-else if($_SESSION['usertype']!='admin') {
+else if($_SESSION['user_type']!='admin') {
   header('Location:../index.php');
 }
 else {
-	$user=$_SESSION['username'];
+	$user=$_SESSION['user_name'];
 }
 
 /* fetch user detail */
@@ -36,13 +36,13 @@ if($result) {
 			//include("../include/frame_profile_detail.php");
       echo "<tr>";
         echo "<td>".$row['id']."</td>";
-        echo "<td>".$row['username']."</td>";
-        echo "<td>".$row['firstname']."</td>";
-        echo "<td>".$row['emailid']."</td>";
+        echo "<td>".$row['user_name']."</td>";
+        echo "<td>".$row['first_name']."</td>";
+        echo "<td>".$row['email']."</td>";
         echo "<td>".$row['password']."</td>";
         //echo "<td><button type=\"button\" class=\"btn btn-default\">Left</button></td>";
 
-        $delete_user_link='../include/delete_user.php?username='.$row['username'];
+        $delete_user_link='../include/delete_user.php?user_name='.$row['user_name'];
         echo "<td><a href=$delete_user_link ><button type=\"button\" class=\"btn btn-danger\">Delete</button></a></td>";
 
       echo "</tr>";

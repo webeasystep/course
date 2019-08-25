@@ -2,18 +2,16 @@
 /* Authenticate user */
 include("../db/dbconnect.php");
 
-/* Redirect if postid is not set */
-if(!isset($_REQUEST['username'])) {
+/* Redirect if post_id is not set */
+if(!isset($_REQUEST['user_name'])) {
 	 header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
-	$username=$_REQUEST['username'];
+	$user_name=$_REQUEST['user_name'];
 }
 
 
 /* delete from table posts */
-$query="DELETE FROM users_buffer
-		WHERE username='$username'
-		";
+$query="DELETE FROM users_buffer WHERE user_name='$user_name' ";
 
 $result=mysqli_query($conn , $query);
 
@@ -23,4 +21,3 @@ if($result==TRUE) {
 	echo "Something went Wrong ! please try again later";
 }
 
-?>

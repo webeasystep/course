@@ -15,7 +15,7 @@
 			    <div class="panel-body">
 
 			     <!-- FORM STARTS HERE -->
-			      <form role="form" method="POST" action=<?php echo "update.php?id=".$id ; ?>>
+			      <form role="form" method="POST" action=<?php echo "update_post.php?id=".$id ; ?>>
 					  <div class="form-group">
 					    <label class="control-label">Title</label>
 					    <input type="" class="form-control" name="postTitle" value=<?php  echo $title; ?>>
@@ -23,7 +23,7 @@
 
 					  <div class="form-group">
   						<label for="Description">Description : </label>
-  						<textarea class="form-control" rows="8" id="content" name="postDesc">
+  						<textarea class="form-control" rows="8" id="content" name="post_desc">
   							<?php  echo $desc; ?>
   						</textarea>
   						<script type="text/javascript">
@@ -33,7 +33,7 @@
 
 					  <div class="form-group">
 					    <label class="control-label">Tag</label>
-					    <input type="text" class="form-control" name="postTag" value=<?php  echo $tags; ?> >
+					    <input type="text" class="form-control" name="post_tag" value=<?php  echo $tags; ?> >
 					  </div>
 
 				  	   <button type="submit" class="btn btn-default" name="submit">
