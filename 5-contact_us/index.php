@@ -5,7 +5,7 @@ session_start(); ?>
 </head>
 <body>
 <div class="container">  
-  <form id="contact" action="sendmemail.php" method="post">
+  <form id="contact" action="send_mail.php" method="post">
     <h3>Quick Contact</h3>
     <h4>Contact us today, and get reply with in 24 hours!</h4>
     <fieldset>

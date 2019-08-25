@@ -9,4 +9,3 @@
 		printf("Error : %s",mysqli_connect_error());
 	}
 
-?>

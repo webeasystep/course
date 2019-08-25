@@ -5,6 +5,7 @@
  * using for loop
  * using COUNT and dynamic query with mysql
  * using ternary operator = short if
+ * Using modulo (%) operator
 
 # Resources
 

@@ -55,7 +55,7 @@
                  while ($data = $sql->fetch ()) {// Get all data from the results of the execution of $sql
 
                 ?>
-                    <tr>
+                    <tr <?= ($no % 2 == 0) ? "class='warning' " : ""?>>
                         <td class="align-middle text-center"> <?php echo $no; ?> </td>
                          <td class="align-middle"> <?php echo $data['nis']; ?> </td>
                          <td class="align-middle"> <?php echo $data['name']; ?> </td>

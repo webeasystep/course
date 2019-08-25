@@ -22,12 +22,11 @@ if (isset($_POST['submit'])) {
     $headers .= 'Content-type:text/html; charset=UTF-8' . "\r\n";
     $headers .= "From: " . $_POST['name'] . "<" . $_POST['email'] . ">\r\n";
     $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
-    $mail_subject = 'Messsage recived for' . $subject . ' Contact Page';
+    $mail_subject = 'Messsage received for' . $subject . ' Contact Page';
     $body = $subject . '
 	The person that contacted you is  ' . $name . '
 	 E-mail: ' . $email . '
 	 Subject: ' . $subject . '
-	
 	 Message: 
 	 ' . $message . '	
 	|---------END MESSAGE----------|';
