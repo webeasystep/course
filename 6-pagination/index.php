@@ -33,6 +33,7 @@
                     <th>GENDER</th>
                     <th>TEL</th>
                     <th>ADDRESS</th>
+                    <th>options</th>
                 </tr>
                 <?php
                 // Include / load file db.php
@@ -62,6 +63,7 @@
                          <td class="align-middle"> <?php echo $data['gender']; ?> </td>
                          <td class="align-middle"> <?php echo $data['tel']; ?> </td>
                          <td class="align-middle"> <?php echo $data['address']; ?> </td>
+                        <td class="align-middle"> <a class="btn btn-danger" href="">Delete</a></td>
                     </tr>
                 <?php
                 $no++; // Add 1 for each looping
@@ -106,9 +108,7 @@
                 $link_active = ($page == $i) ? 'class="active"' : '';
             ?>
                 <li <?php echo $link_active; ?>><a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-            <?php
-            }
-            ?>
+            <?php } ?>
 
             <!-- LINK NEXT AND LAST -->
             <?php
