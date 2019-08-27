@@ -1,6 +1,8 @@
 # php-mysql-login
 - A basic PHP and MySQL login and registration system.
-
+# resourses
+https://tutorialsclass.com/learn/php/php-cookies
+https://tutorialsclass.com/learn/php/php-session
 # Instrunctions to run
 - Create a MySQL database named login(or anything else and change the fourth parameter in <code>mysqli_connect()</code> in <code>connection.php</code>)
 - Create a table named users( or anything else and change the ninth line in <code>index.php</code> to alter <code>$sql</code>

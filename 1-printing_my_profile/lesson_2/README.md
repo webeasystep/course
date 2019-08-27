@@ -10,8 +10,6 @@
 
 
 # Quiz
-- Google it
-- Can we define var before use it ?
-- How to solve define before use variable (USE NULL)
+
 
 

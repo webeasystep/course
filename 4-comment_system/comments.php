@@ -70,8 +70,6 @@ function editComments($db)
 {
     if (isset($_POST['commentSubmit'])) {
         $comment_id = $_POST['comment_id'];
-        $user_id = $_POST['user_id'];
-        $comment_date = $_POST['comment_date'];
         $message = $_POST['message'];
 
         //Update table comments, set specific column message to new message from user
