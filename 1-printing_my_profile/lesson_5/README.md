@@ -9,8 +9,6 @@
 # Resources
 
 # Quiz
-- google it
-- can we define var before use it ?
-- how to solve define before use variable (USE NULL)
+
 
 
