@@ -3,8 +3,8 @@
 //This function inserts data into the database
 function setComments($db)
 {
-    //Returns true if commentSubmit button is clicked
-    if (isset($_POST['commentSubmit'])) {
+    //Returns true if comment_submit button is clicked
+    if (isset($_POST['comment_submit'])) {
 
         $user_id = $_POST['user_id'];
         $comment_date = $_POST['comment_date'];
@@ -26,7 +26,7 @@ function getComments($db)
 {
     $sql = "SELECT * FROM comments";
 
-    // Creates a connection($conn) and then queries everthing selected from comments table
+    // Creates a connection($conn) and then queries everything selected from comments table
     if (!$result = $db->query($sql)) {
         printf("Error message: %s\n", $db->error);
         exit();
@@ -68,7 +68,7 @@ function getComments($db)
 //Function for Editing comments
 function editComments($db)
 {
-    if (isset($_POST['commentSubmit'])) {
+    if (isset($_POST['comment_submit'])) {
         $comment_id = $_POST['comment_id'];
         $message = $_POST['message'];
 
@@ -138,7 +138,7 @@ function getLogin($db)
 //logout function
 function userLogout()
 {
-    if (isset($_POST['logoutSubmit'])) {
+    if (isset($_POST['logout_submit'])) {
         //Starts the session
         session_start();
         //Destroys the session

@@ -1,6 +1,6 @@
 
 # Instructions
- - The GET method produces a long string that appears in your server logs, in the browser's Location: box.
+- The GET method produces a long string that appears in your server logs, in the browser's Location: box.
 - The GET method is restricted to send up to 1024 characters only.
 - Never use GET method if you have password or other sensitive information to be sent to the server.
 - GET can't be used to send binary data, like images or word documents, to the server.
@@ -26,6 +26,5 @@ The PHP provides $_GET associative array to access all the sent information usin
 
 
 # Quiz
-- how to Make $size_recommendation = -1 using type casting ?
 
 

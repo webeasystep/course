@@ -7,12 +7,16 @@
  */
 # define variable (name) and assign value for your name as string
 // CODE HERE
+
 # define variable (age) and assign value for your age as an integer
 // CODE HERE
+
 # define variable (tall) and assign value for your age as an float
 // CODE HERE
+
 # define variable (info) and concatenate all above variables to it
 // CODE HERE
+
 # print variable (info)
 // CODE HERE
 

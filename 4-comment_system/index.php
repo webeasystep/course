@@ -38,11 +38,11 @@ if (isset($_SESSION['id'])) {
               <input type='hidden' name='user_id' value='$user_id'>
               <input type='hidden' name='comment_date' value='" . date('Y-m-d H:i:s') . "'>
               <textarea name='message'></textarea><br>
-              <button type='submit' name='commentSubmit'> Comment </button>
+              <button type='submit' name='comment_submit'> Comment </button>
 	     </form> 
 	  <br>
          <form method='post' action='" . userLogout() . "' >
-            <button type='submit' name='logoutSubmit'> LogOut </button>
+            <button type='submit' name='logout_submit'> LogOut </button>
          </form>
 	  ";
     echo "You are logged in!";

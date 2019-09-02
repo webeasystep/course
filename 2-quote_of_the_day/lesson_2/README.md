@@ -9,6 +9,3 @@
 
 
 # Quiz
-- how to Make $size_recommendation = -1 using type casting ?
-
-

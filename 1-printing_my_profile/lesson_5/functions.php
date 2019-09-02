@@ -6,30 +6,35 @@
  * Time: 12:42 PM
  */
 
-function format_favorites(){
+function format_favorites()
+{
     $lang_str = "";
-    $favorites =  array('color' =>"white", 'drink' =>"orange juice");
-    foreach ($favorites as $key =>$value) {
-        $lang_str .= "(".$key."=".$value.")"."-";
+    $favorites = array('color' => "white", 'drink' => "orange juice");
+    foreach ($favorites as $key => $value) {
+        $lang_str .= "(" . $key . "=" . $value . ")" . "-";
     }
     return $lang_str;
 }
-function format_languages(){
+
+function format_languages()
+{
     $languages = array('PHP', 'Mysql', 'Javascript', 'Kotlin');
     $fav_str = "";
-    $arrCount = count($languages);
-    $loopCount = 0;
-    foreach ($languages as $language) {
-        if(++$loopCount !== $arrCount) {
-            $fav_str .= $language ."-";
-        }else{
-            $fav_str .= $language;
+    $arrLength = count($languages);
+    for ($loopCount = 0; $loopCount < $arrLength; $loopCount++) {
+        if (++$loopCount !== $arrLength) {
+            $fav_str .= $languages[$loopCount] . "-";
+        } else {
+            $fav_str .= $languages[$loopCount];
         }
     }
+
     return $fav_str;
 }
-function format_size_recommendation($tall,$weight){
-    $size_diff =  $tall - 100 - $weight ;
+
+function format_size_recommendation($tall, $weight)
+{
+    $size_diff = $tall - 100 - $weight;
     switch ($size_diff) {
         case ($size_diff >= 20):
             return "Too ​Skinny You should weight $size_diff";

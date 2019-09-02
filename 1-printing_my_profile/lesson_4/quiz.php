@@ -8,6 +8,7 @@
 
 # create function that takes two integer parameters ,multiply them, and return the result
 // CODE HERE
+
 # create function that takes this array as a parameter : array("A"=>"Ahmed","b"=>"bassem","c"=>"careem")
 # loop through array, if the value is bassem print the index else return the count of items
 // CODE HERE

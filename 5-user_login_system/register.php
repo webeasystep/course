@@ -7,7 +7,7 @@
 		$query = "INSERT INTO users(username,password,activated) VALUES('$username', '$password','1')";
 		$result = mysqli_query($db,$query);
 		if($result) {
-			echo "Succesfully registered";
+			echo "Successfully registered";
 			header('Location: index.php');
 		}
 		else {
