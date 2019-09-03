@@ -7,9 +7,9 @@
  *  white space from a string
 
 # Resources
-
-
-# Quiz
-
+https://www.tutorialrepublic.com/php-tutorial/php-arrays.php
+https://www.php.net/manual/en/language.operators.assignment.php
+https://www.php.net/manual/en/control-structures.foreach.php
+https://www.php.net/manual/en/function.print-r.php
 
 

@@ -67,6 +67,7 @@ function import_quotes()
 
 function edit($id)
 {
+    #example 5 read specific line from file
     $filename = "quotes.txt";
     $lines = file($filename, FILE_IGNORE_NEW_LINES);
     $current_line = $lines[$id];

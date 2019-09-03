@@ -7,7 +7,11 @@
  *  print with type using var_dump
 
 # Resources
-
+https://www.php.net/manual/en/language.types.intro.php
+https://www.php.net/manual/en/language.operators.php
+https://www.php.net/manual/en/language.control-structures.php
+https://www.php.net/manual/en/function.count.php
+https://www.php.net/manual/en/function.var-dump.php
 
 # Quiz
 - how to Make $size_recommendation = -1 using type casting ?

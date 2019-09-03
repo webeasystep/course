@@ -7,7 +7,10 @@
  * issue with handle upload files with 100000 + issue with adding date
 
 # Resources
-
+https://www.php.net/manual/en/function.pathinfo.php
+https://www.php.net/manual/en/reserved.variables.files.php
+https://www.php.net/manual/en/reserved.variables.session.php
+https://www.php.net/manual/en/ref.session.php
 
 # Quiz
 - how to use header with $_GET to show error message

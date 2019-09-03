@@ -9,6 +9,9 @@
 # remove number 10 from array(1,2,3,4,5) using unset function and print it after remove
 // CODE HERE
 
+# loop through number 10 with Incrementing Operators (++) and print 1-2-4-5 using while , break and continue
+// CODE HERE
+
 # print array(1,2,3,4,5) as 1-2-3-4-5 using implode
 // CODE HERE
 
@@ -27,3 +30,5 @@
 # add your name to the end quotes.txt file
 // CODE HERE
 
+
+// what is the difference between while and do while loop -- google it ?

@@ -23,8 +23,5 @@ The PHP provides $_GET associative array to access all the sent information usin
  * using header to redirect to another page
 
 # Resources
-
-
-# Quiz
-
-
+https://www.php.net/manual/en/language.variables.superglobals.php
+https://www.php.net/manual/en/language.variables.scope.php
