@@ -5,10 +5,10 @@ so if you're coming to MySQL from a different database system, these definitions
 The following list shows the common numeric data types and their descriptions −
 
 - INT −
-A normal-sized integer that can be signed or unsigned. If signed,
-the allowable range is from -2147483648 to 2147483647.
-If unsigned, the allowable range is from 0 to 4294967295.
-You can specify a width of up to 11 digits.
+    -  A normal-sized integer that can be signed or unsigned. If signed,
+        the allowable range is from -2147483648 to 2147483647.
+        If unsigned, the allowable range is from 0 to 4294967295.
+        You can specify a width of up to 11 digits.
 
 - TINYINT
 A very small integer that can be signed or unsigned.
@@ -30,7 +30,8 @@ If unsigned, the allowable range is from 0 to 16777215. You can specify a width 
 - BIGINT
 A large integer that can be signed or unsigned.
 If signed, the allowable range is from -9223372036854775808 to 9223372036854775807.
-If unsigned, the allowable range is from 0 to 18446744073709551615. You can specify a width of up to 20 digits.
+If unsigned, the allowable range is from 0 to 18446744073709551615.
+ You can specify a width of up to 20 digits.
 
 - FLOAT(M,D)
 A floating-point number that cannot be unsigned. You can define the display length (M)
@@ -46,7 +47,8 @@ You can define the display length (M) and the number of decimals (D).
 
 - DECIMAL(M,D)
 An unpacked floating-point number that cannot be unsigned. In the unpacked decimals,
-each decimal corresponds to one byte. Defining the display length (M) and the number of decimals (D) is required.
+each decimal corresponds to one byte. 
+Defining the display length (M) and the number of decimals (D) is required.
 NUMERIC is a synonym for DECIMAL.
 
 # Date and Time Types
@@ -57,7 +59,8 @@ A date in YYYY-MM-DD format, between 1000-01-01 and 9999-12-31.
  For example, December 30th, 1973 would be stored as 1973-12-30.
 
 - DATETIME
-A date and time combination in YYYY-MM-DD HH:MM:SS format, between 1000-01-01 00:00:00 and 9999-12-31 23:59:59.
+A date and time combination in YYYY-MM-DD HH:MM:SS format,
+between 1000-01-01 00:00:00 and 9999-12-31 23:59:59.
 For example, 3:30 in the afternoon on December 30th, 1973 would be stored as 1973-12-30 15:30:00.
 
 - TIMESTAMP

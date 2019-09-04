@@ -21,3 +21,6 @@
 
 ##Data types
 # Objects − Not for now.
+// simplify content + increase practical = maxmize benefits --
+// maxmize benefits kharoof or capsule in jim
+// promise is mamiuxm benefit and enjoiable experinse

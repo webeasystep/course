@@ -27,28 +27,6 @@ and would be as shown below .
 +-----------+
 | ADDRESS   |
 +-----------+
-
-
-What is a Record or a Row?
-A record is also called as a row of data is each individual entry that exists in a table.
-For example, there are 7 records in the above CUSTOMERS table. Following is a single row of data or record
-in the CUSTOMERS table .
-
-+----+----------+-----+-----------+----------+
-|  1 | Ramesh   |  32 | Ahmedabad |  2000.00 |
-+----+----------+-----+-----------+----------+
-A record is a horizontal entity in a table.
-
-What is a field?
-Every table is broken up into smaller entities called fields.
-The fields in the CUSTOMERS table consist of ID, USERNAME, AGE, ADDRESS and SALARY.
-
-a field is the intersection of a row and a column Aka(cells).
-i.e. if your table has 10 rows and 10 columns, it has 100 fields.
-
-+-----------+
-| ADDRESS   |
-+-----------+
 | Cairo     |
 | Alex      |
 | Giza      |
@@ -57,3 +35,33 @@ i.e. if your table has 10 rows and 10 columns, it has 100 fields.
 | Luxor     |
 | Tanta     |
 +-----------+
+
+
+What is a Record or a Row?
+A record is also called as a row of data .
+For example, there are 7 records in the above CUSTOMERS table.
+Following is a single row of data or record in the CUSTOMERS table :
+
++----+----------+-----+-----------+----------+
+|  1 | ahmed   |  32 | Cairo |  2000.00 |
++----+----------+-----+-----------+----------+
+A record is a horizontal entity in a table.
+
+What is a field (cell)?
+Every table is broken up into smaller entities called fields.
+a field is the intersection of a row and a column Aka(cells).
+i.e. if your table has 10 rows and 10 columns, it has 100 fields.
+
+A schema in SQL is a template:
+In MySQL, schema is synonymous with database.
+
+What is a primary key ?
+a key in a relational database that is unique for each record.
+It is a unique identifier, such as a driver license number,
+telephone number (including area code), or vehicle identification number (VIN).
+A relational database must always have one and only one primary key.
+Primary keys typically appear as columns in relational database tables.
+
+-No two rows can have the same primary key value.
+-Every row must have a primary key value (primary key columns may not allow NULL values).
+
