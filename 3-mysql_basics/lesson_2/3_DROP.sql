@@ -3,9 +3,10 @@ CREATE TABLE books (
     title VARCHAR(255) NOT NULL
 )  ENGINE=INNODB;
 
---------------------------------------- DROP -----------------------------------------
+######################################### DROP #########################################
 -- REMOVE DATABASE
-DROP DATABASE test;
+CREATE DATABASE drop_test;
+DROP DATABASE drop_test;
 -- REMOVE TABLE OR TABLES
 DROP TABLE IF EXISTS books;
 

@@ -1,4 +1,4 @@
----------------------------------------- Retrieving Data  -------------------------------------
+######################################### Retrieving Data  ######################################
 -- Retrieve one column
 SELECT prod_name FROM products;
 
@@ -14,7 +14,8 @@ SELECT DISTINCT vend_id FROM products;;
 -- Limiting Results
 SELECT prod_name FROM products LIMIT 5;
 
-/*  NOTE :
+/*
+NOTE :
 It is important to note that SQL statements are not case sensitive, so SELECT is the same as select,
 which is the same as Select.Many SQL developers find that using uppercase for all SQL keywords
 and lowercase for column and table names makes code easier to read and debug

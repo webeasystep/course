@@ -1,4 +1,4 @@
---------------------------------------- TRUNCATE --------------------------------------
+####################################### TRUNCATE #######################################
 The TRUNCATE TABLE statement
 resets value in the AUTO_INCREMENT  column to its start value if the table has an AUTO_INCREMENT column
 TRUNCATE  books;
