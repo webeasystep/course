@@ -1,4 +1,4 @@
-######################################### Filtering Data  ######################################
+######################################### Filtering Retrieved Data  ######################################
 # When using both ORDER BY and WHERE clauses
 # review Logical Operators
 

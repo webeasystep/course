@@ -13,7 +13,7 @@
     # This table is used to link the other two tables together.
     # It does this by having two fields that reference the primary key of each of the other two tables
 
-##################################### relational keys #############################################
+##################################### Relational keys #############################################
 # What is a primary key ?
 
 # The primary key is the field that is used to ensure the uniqueness of the data in the table.
