@@ -32,3 +32,27 @@ SELECT prod_name, prod_price
 FROM products
 WHERE vend_id IN (1002,1003)
 ORDER BY prod_name;
+
+SELECT prod_name, prod_price
+FROM products
+WHERE vend_id NOT IN (1002,1003)
+ORDER BY prod_name;
+
+# Using Wildcard Filtering
+# to find all products that start with the word jet,
+
+SELECT prod_id, prod_name
+FROM products
+WHERE prod_name LIKE 'jet%';
+
+# match any value that contains the text anvil anywhere within it,
+# regardless of any characters before or after that text.
+
+SELECT prod_id, prod_name
+FROM products
+WHERE prod_name LIKE '%anvil%';
+
+#finds all products that begin with an s and end with an e
+SELECT prod_name
+FROM products
+WHERE prod_name LIKE 's%e'
