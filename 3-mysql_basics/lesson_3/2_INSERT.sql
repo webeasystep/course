@@ -16,13 +16,8 @@ VALUES('Pep E. LaPew',
        NULL,
        NULL);
 ########################### Inserting Multiple Rows  ###############################
-INSERT INTO customers(cust_name,
-                      cust_address,
-                      cust_city,
-                      cust_state,
-                      cust_zip,
-                      cust_country)
-VALUES(
+INSERT INTO customers(cust_name,cust_address, cust_city,cust_state,cust_zip,cust_country)
+VALUES  (
           'Pep E. LaPew',
           '100 Main Street',
           'Los Angeles',
@@ -30,7 +25,7 @@ VALUES(
           '90046',
           'USA'
           ),
-      (
+        (
           'M. Martian',
           '42 Galaxy Way',
           'New York',
@@ -48,13 +43,13 @@ INSERT INTO customers(cust_id,
                       cust_state,
                       cust_zip,
                       cust_country)
-SELECT cust_id,
-       cust_contact,
-       cust_email,
-       cust_name,
-       cust_address,
-       cust_city,
-       cust_state,
-       cust_zip,
-       cust_country
-FROM custnew;
+                SELECT cust_id,
+                       cust_contact,
+                       cust_email,
+                       cust_name,
+                       cust_address,
+                       cust_city,
+                       cust_state,
+                       cust_zip,
+                       cust_country
+                FROM custnew;
