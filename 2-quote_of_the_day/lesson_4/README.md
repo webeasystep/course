@@ -12,8 +12,3 @@ https://www.php.net/manual/en/reserved.variables.files.php
 https://www.php.net/manual/en/reserved.variables.session.php
 https://www.php.net/manual/en/ref.session.php
 
-# Quiz
-- how to use header with $_GET to show error message
-- why if order works wrong
-
-

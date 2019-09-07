@@ -14,3 +14,10 @@ WHERE cust_id = 10005;
 
 DELETE FROM customers
 WHERE cust_id = 10006;
+
+# DELETE VS TRUNCATE
+
+# TRUNCATE is a DDL command , DELETE is a DML command
+# TRUNCATE removes all rows from a table, DELETE remove one or more columns.
+# We cannot use WHERE clause with TRUNCATE , we can use WHERE clause with DELETE.
+# The TRUNCATE TABLE statement resets index column , delete will not reset id.

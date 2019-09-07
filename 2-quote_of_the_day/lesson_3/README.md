@@ -16,6 +16,7 @@ The PHP provides $_GET associative array to access all the sent information usin
  
  # Summary
  * handle form actions with super global($REQUEST-$_GET-$POST)
+ * elseif condition
  * local scope - global scope
  * handle all actions with global conditions
  * what is create functionality and how its works
