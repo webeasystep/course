@@ -12,7 +12,11 @@ SELECT * FROM products;
 SELECT DISTINCT vend_id FROM products;;
 
 -- Limiting Results
+ ## get 5 rows only
 SELECT prod_name FROM products LIMIT 5;
+
+## get rows from 5 to 12
+SELECT prod_name FROM products LIMIT 5,12;
 
 /*
 NOTE :

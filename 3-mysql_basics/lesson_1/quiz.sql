@@ -1,6 +1,4 @@
 
-
-
 # What is the best data type and size to save your name ?
 ## CODE HERE
 

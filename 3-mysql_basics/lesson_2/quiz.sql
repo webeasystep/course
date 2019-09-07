@@ -7,6 +7,9 @@
 # id - first_name - last_name - user_name - studemt_email - scores - serial_number - created
 ## CODE HERE
 
+# CHANGE id to be primary and add auto increment:
+## CODE HERE
+
 # Add a new column "phone_number" AFTER user_name column
 ## CODE HERE
 
