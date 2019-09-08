@@ -25,4 +25,8 @@
 # get all rows if order_num COLUMN in orders has not values "20005" or "20009"
 ## CODE HERE
 
-SELECt FILTER exampleeeeeeeeeeeeeeee
+# get all rows if order_date COLUMN in orders when date  after 2005-09-12 and order_num more than 20006
+## CODE HERE
+
+# get all rows if orderitems COLUMN in orders where prod_id has "N" character
+## CODE HERE
