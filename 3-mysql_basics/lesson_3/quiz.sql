@@ -30,3 +30,25 @@
 
 # get all rows if orderitems COLUMN in orders where prod_id has "N" character
 ## CODE HERE
+
+# get all rows for these related columns (order_num,quantity,item_price,product name,customer name)
+## CODE HERE
+
+# get all rows for these related columns (prod_price,prod_name,note_date,note_text) from products and productsnotes
+## CODE HERE
+
+# get all  rows from products even if no notes in  productsnotes
+## CODE HERE
+
+# get all  rows from productsnotes even if no notes in  products
+## CODE HERE
+
+# try to insert dummy data products and customers
+## CODE HERE
+
+# try to update vendors on vend_country is USA ,put 5555 in vend_zip
+## CODE HERE
+
+# try to delete only the last 2 notes from productnotes table
+## CODE HERE
+

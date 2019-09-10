@@ -21,34 +21,48 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<body>
+<div class="container">
+    <h1>Register</h1>
+    <div class="jumbotron">
+        <h1>Comments Tutorial</h1>
+        <p>In this script you will know about login and comments.</p>
+    </div>
+    <div class="row">
 <!-- Video to be displayed on the browser-->
 <iframe width="320" height="240"
         src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 <br>
+
 <!-- The form belows allow the user to login and logout before updating or deleting any comments in the website-->
 <?php
 
 //This code checks if user is logged in or logout
 if (isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
+    echo "<div class='alert alert-success'>
+        <strong>Success!</strong> You are logged in!
+        </div>";
     //In order to see the form inside the PHP code, use echo"";
     echo "<form method='post' action='" . setComments($db) . "'>
               <input type='hidden' name='user_id' value='$user_id'>
               <input type='hidden' name='comment_date' value='" . date('Y-m-d H:i:s') . "'>
-              <textarea name='message'></textarea><br>
-              <button type='submit' name='comment_submit'> Comment </button>
+            <div class='form-group'>
+            <label class='control-label'>Title</label>
+            <textarea class='form-control' name='message'></textarea><br>
+            </div>
+              <button class='btn btn-success' type='submit' name='comment_submit'> Send </button>
 	     </form> 
-	  <br>
          <form method='post' action='" . userLogout() . "' >
-            <button type='submit' name='logout_submit'> LogOut </button>
+            <div class='form-group'>
+            <button class='btn btn-info' type='submit' name='logout_submit'> LogOut </button>
+            </div>
          </form>
 	  ";
-    echo "You are logged in!";
 } else {
     echo
-        "<form method='post' action='" . getLogin($db) . "' >
+        "<form class='form-inline' role='form' method='post' action='" . getLogin($db) . "' >
 		    <input type='text' name='user_name'>
 		    <input type='password' name='password'>
 		    <button type='submit' name='loginSubmit'> LogIn </button>
@@ -57,13 +71,15 @@ if (isset($_SESSION['id'])) {
 }
 ?>
 
-<br> <br>
+</div>
 
-
+<div class="row">
 <!--date()- Displays the date, Y-m-d(Year,Month, Date) H:i:s(Hour, Minute, Second) -->
 <?php
 //The function below is used to get comments from the database
 getComments($db);
 ?>
+</div>
+</div>
 </body>
 </html>

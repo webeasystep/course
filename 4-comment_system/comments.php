@@ -51,14 +51,14 @@ function getComments($db)
         echo "</p> 
 				<form class= 'delete-form' method ='POST' action ='" . deleteComments($db) . "'>
 					<input type='hidden' name='comment_id' value='" . $row['comment_id'] . "'>
-					<button name='commentDelete'> Delete </button>
+					<button class='btn btn-success' name='commentDelete'> Delete </button>
 				</form>
 				<form class= 'edit-form' method ='POST' action = 'edit_comment.php'>
 					<input type='hidden' name='comment_id' value='" . $row['comment_id'] . "'>
 					<input type='hidden' name='user_id' value='" . $row['user_id'] . "'>
 					<input type='hidden' name='comment_date' value='" . $row['comment_date'] . "'>
 					<input type='hidden' name='message' value='" . $row['message'] . "'>
-					<button> Edit </button>
+					<button class='btn btn-danger' > Edit </button>
 				</form>
 			
 			</div>";
@@ -112,12 +112,13 @@ function getLogin($db)
 
         $user_name = $_POST['user_name'];
         $password = md5($_POST['password']);
-
         //Selects everything(*) from table comments and stores it in a variable
         $sql = "SELECT * FROM users WHERE username= '$user_name' AND password= '$password' ";
 
         // Creates a connection($conn) and then query  everything selected from comments table
-        $result = $db->query($sql);
+        if (!$result = $db->query($sql)) {
+            printf("Errormessage: %s\n", $db->error);
+        }
         //mysqli_num_rows() - Counts the number of rows of element or variable between the brackets
         if (mysqli_num_rows($result) == 1) {
             if ($row = $result->fetch_assoc()) {
@@ -129,8 +130,9 @@ function getLogin($db)
             }
         } else {
             header("Location:index.php?loginfailed");
-            var_dump($db->error);
+            var_dump($sql);
             exit();
+
         }
     }
 }

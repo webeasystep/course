@@ -33,10 +33,14 @@ echo "<form method='post' action='".editComments($db)."'>
 		<input type='hidden' name='comment_id' value='".$comment_id."'>
 		<input type='hidden' name='user_id' value='".$user_id."'>
 		<input type='hidden' name='comment_date' value='".$comment_date."'>
-		<textarea name='message'> ".$message." </textarea><br>
-		<button type='submit' name='SubmitComments'> Edit </button>
+		<div class='form-group'>
+        <label class='control-label'>Title</label>
+        <textarea class='form-control' name='message'> ".$message." </textarea><br>
+        </div>
+        <button class='btn btn-success' type='submit' name='SubmitComments'> Edit </button>
 	  </form> <br>";
 
 ?>
 </body>
+
 </html>
