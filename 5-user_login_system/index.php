@@ -16,9 +16,7 @@ session_start();
         Welcome! You have successfully logged in. Thank you.
         <a href="<?php echo WEB_ROOT; ?>logout.php" onclick="return confirm('Are you sure want to logout?')">Logout</a>
     </div>
-    <form action="index.php">
-        <input type="submit" name="Logout" value="Logout">
-    </form>
+
 </div>
 </body>
 </html>

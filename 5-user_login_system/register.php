@@ -26,16 +26,17 @@
     <!------ Include the above in your HEAD tag ---------->
 </head>
 <body>
-<h1>Register</h1>
+
 <div class="container">
+
     <div class="row">
+        <h1>Register</h1>
+        <hr>
         <div class="span12">
 
             <form class="form-horizontal" action="register.php" method="POST">
                 <fieldset>
-                    <div id="legend">
-                        <legend class="">register</legend>
-                    </div>
+
                     <div class="form-group">
                         <!-- Username -->
                         <label   for="username">Username</label>
@@ -54,11 +55,11 @@
                         <!-- Button -->
                         <div class="controls">
                             <button type="submit" name="submit" value="Register" class="btn btn-success">Login</button>
+                            <a href="login.php" class="btn btn-info">Back</a>
                         </div>
                     </div>
                 </fieldset>
             </form>
-            <a href ="index.php" >Login</a>
 
         </div>
     </div>

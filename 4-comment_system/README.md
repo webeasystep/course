@@ -12,7 +12,6 @@
 # Resources
 
 
-# Quiz
-Make changes to this script
+
 
 

@@ -21,12 +21,9 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<body>
 <div class="container">
-    <h1>Register</h1>
     <div class="jumbotron">
         <h1>Comments Tutorial</h1>
-        <p>In this script you will know about login and comments.</p>
     </div>
     <div class="row">
 <!-- Video to be displayed on the browser-->

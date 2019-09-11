@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])) {
 <div class="container">
     <div class="jumbotron">
         <h1>Welcome <?php echo $username; ?>.</h1>
-        <p> Your user Id is <?php echo $userId; ?>.</p>
+        <!-- <p> Your age  is <//?php echo $userId; ?>.</p> !-->
     </div>
     <form action="index.php">
         <input type="submit" name="Logout" value="Logout">

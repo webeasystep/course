@@ -39,9 +39,11 @@ function user_login($username, $password)
 {
     if (user_exists($username) == FALSE) {
         return "You are not a registered member";
-    } else if (confirm_user($username, md5($password)) === FALSE) {
+    }
+    else if (confirm_user($username, md5($password)) === FALSE) {
         return "Authentication error";
-    } else {
+    }
+    else {
         $_SESSION['username'] = $username;
         $_SESSION['user_pass'] = $password;
         $row = dbFetchAssoc(confirm_user($username, md5($password)));
