@@ -7,11 +7,8 @@
  * different between client side and server side validations
 
 # Resources
-
-
-# Quiz
-- how to send with attachment
-- how to implement validation message under inputs
-- how to validate required inputs with server side validation
-
-
+https://www.php.net/manual/en/function.preg-match.php
+https://www.php.net/manual/en/function.strlen.php
+https://www.php.net/manual/en/function.mail.php
+https://www.php.net/manual/en/function.htmlspecialchars.php
+https://www.php.net/manual/en/function.stripslashes.php

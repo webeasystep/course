@@ -38,11 +38,11 @@ function getComments($db)
         //div class comment box is used to style the comment box
         echo "<div class='comment-box'> <p>";
 
-        //$row['user_id']- Echoes name of the user from the database
+        // Echoes name of the user from the database
         echo $row['user_id'] . "<br>";
-        //$row['comment_date']- Echoes comment_date from the database
+        //- Echoes comment_date from the database
         echo $row['comment_date'] . "<br>";
-        //$row['message']- Echoes message from the database
+        // Echoes message from the database
         //nl2br()- Is a function that converts nl to break statements
         echo nl2br($row['message']);
 
@@ -77,9 +77,11 @@ function editComments($db)
 
         //Query the database and stores it in a variable called result
         if (!$result = $db->query($sql)) {
+
             printf("Error message: %s\n", $db->error);
             exit();
         }
+
         //Redirects to the front page
         header("Location: index.php");
     }
