@@ -7,5 +7,9 @@
  */
 
 # Step 1 : change time zone to your country time zone
-# Step 1 : change  database
+# Step 2 : hide edit and delete buttons from not login users  using session
+# Step 3 : add another description field to comment form ,use it to add and edit
+# Step 4 : add a required attribute to prevent empty data (client side validation )
+# Step 5 : add a validation using php functions to prevent empty data (server side validation)
+# Step 6 : make while loop through every comment as a table rows not a div
 

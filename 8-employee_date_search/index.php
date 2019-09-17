@@ -5,10 +5,13 @@ include "config.php";
 <html>
     <head>
         <title>jQuery Datepicker to filter records with PHP MySQL</title>
-
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <!-- Script -->
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -21,22 +24,34 @@ include "config.php";
         </script>
     </head>
     <body >
-        
-        <!-- Search filter -->
-        <form method='post' action=''>
-            Start Date <input type='text' class='dateFilter' name='fromDate' value='<?php if(isset($_POST['fromDate'])) echo $_POST['fromDate']; ?>'>
-            
-            End Date <input type='text' class='dateFilter' name='endDate' value='<?php if(isset($_POST['endDate'])) echo $_POST['endDate']; ?>'>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Employee date search Tutorial</h1>
+        </div>
 
-            <input type='submit' name='but_search' value='Search'>
+        <div class="row">
+        <!-- Search filter -->
+        <form class="form-inline" method='post' action=''>
+            <div class="form-group">
+                <label>Start Date </label>
+                <input type='text' class='dateFilter form-control' name='fromDate' value='<?php if(isset($_POST['fromDate'])) echo $_POST['fromDate']; ?>'>
+            </div>
+            <div class="form-group">
+                <label>End Date </label>
+                <input type='text' class='dateFilter form-control' name='endDate' value='<?php if(isset($_POST['endDate'])) echo $_POST['endDate']; ?>'>
+            </div>
+            <div class="form-group">
+            <input type='submit' class="btn btn-info" name='but_search' value='Search'>
+            </div>
         </form>
 
         <!-- Employees List -->
-        <div  >
-            
-            <table border='1' width='100%' style='border-collapse: collapse;margin-top: 20px;'>
+        <div style="padding: 0 15px;">
+            <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
                 <tr>
                     <th>Name</th>
+                    <th>Image</th>
                     <th>Date of Join</th>
                     <th>Gender</th>
                     <th>Email</th>
@@ -70,6 +85,7 @@ include "config.php";
 
                         echo "<tr>";
                         echo "<td>". $empName ."</td>";
+                        echo "<td><img src='https://i.pravatar.cc/70?u=". $email ."'/></td>";
                         echo "<td>". $date_of_join ."</td>";
                         echo "<td>". $gender ."</td>";
                         echo "<td>". $email ."</td>";
@@ -82,7 +98,7 @@ include "config.php";
                 }
                 ?>
             </table>
-            
+        </div>
         </div>
     </body>
 </html>

@@ -37,7 +37,7 @@ echo "<form method='post' action='".editComments($db)."'>
         <label class='control-label'>Title</label>
         <textarea class='form-control' name='message'> ".$message." </textarea><br>
         </div>
-        <button class='btn btn-success' type='submit' name='SubmitComments'> Edit </button>
+        <button class='btn btn-success' type='submit'  name='comment_submit'> Edit </button>
 	  </form> <br>";
 
 ?>

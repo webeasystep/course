@@ -8,7 +8,18 @@ session_start(); ?>
   <form id="contact" action="send_mail.php" method="post">
     <h3>Quick Contact</h3>
     <h4>Contact us today, and get reply with in 24 hours!</h4>
-    <fieldset>
+
+      <fieldset>
+
+      <select  >
+          <option value="0">--Choose Priority --</option>
+          <option value="1">High</option>
+          <option value="2">Medium</option>
+          <option value="3">Low</option>
+      </select>
+      </fieldset>
+
+      <fieldset>
       <input placeholder="Full Name" type="text" name="name" tabindex="1" required autofocus>
         <p><?php if (isset($_SESSION['name_error'])) echo $_SESSION['name_error']; ?></p>
     </fieldset>

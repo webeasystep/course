@@ -6,10 +6,8 @@
  * Time: 4:47 PM
  */
 
-# Step 1 : add age to register form in register.php and save save it to users table
-# Step 1 : print user age in the user.php file after welcome message
-# Step 2 : try to make validations for register form  like login form in login.php
-# Step 3 : Move register Code from register.php file to common.php file as a function
-# Step 4 : decrease cookie time to 30 minutes only
-# Step 5 : even if you are not login you can access user.php page , fix this by redirect user to login page
-
+# Step 1 : implement validation message under inputs and filter spaces with php
+# Step 2 : make priority dropdown loaded dynamically from a priority table
+# Step 3 : create a CRUD Page to add edit delete priorities (you can use comment system)
+# Step 4 : create a new upload field and send contact form with this attachment to the email
+# Step 5 : Send inputs into HTML template to the  email via PHP -- (sending html email with php ) google it
