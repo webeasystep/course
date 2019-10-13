@@ -1,7 +1,7 @@
 
 # Summary
  *  Indexed array - Associative array
- *  define - set value - change value
+ *  define - set value - change value  for array
  *  foreach loop + assignment operator - print array
  *  print mix html with $variable
  *  white space from a string
