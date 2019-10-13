@@ -8,13 +8,7 @@ $languages_1 = "PHP";
 $languages_2 = "MYSQl";
 $languages_3 = "JavaScript";
 $languages_4 = "Kotlin";
-/*
-    Rules for PHP arrays:
-    Every array should index,value
-    A array index should be unique
-    Indexed array − An array with a numeric index. Values are stored and accessed in linear way.
-    Associative array − An array with strings as index. This stores element values in association with key values rather than in a strict linear index order.
-*/
+
 ### example 1 (print)
 $languages[0]="PHP";
 $languages[1]="Mysql";

@@ -5,19 +5,26 @@
  * Date: 2019-08-27
  * Time: 4:47 PM
  */
-# define variable (name) and assign value for your name as string
+
+# define Indexed array (colors) and assign value for 4 color's names
 // CODE HERE
 
-# define variable (age) and assign value for your age as an integer
+# define Associative array (countries) and assign 4 countries as key =(character) , value = (country name)
 // CODE HERE
 
-# define variable (tall) and assign value for your age as an float
+# add new element to colors array
 // CODE HERE
 
-# define variable (info) and concatenate all above variables to it
+# print the last element from colors array
 // CODE HERE
 
-# print variable (info)
+#  change the second element from  countries array
 // CODE HERE
 
-# Can we define var before use it - Google it ?
+# print the second element from  countries array
+// CODE HERE
+
+# print countries array with foreach and add a comma after every country
+// CODE HERE
+
+# print array with commas without loop php - Google it ?
