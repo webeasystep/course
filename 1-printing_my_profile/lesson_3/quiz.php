@@ -27,7 +27,10 @@
 # loop through prices array using foreach and print (prices - 100)
 //// CODE HERE
 ///
-# print how many elements in price array using count function
+# print how many elements in prices array using count function
 // CODE HERE
 
-# Can we define var before use it - Google it ?
+# Quiz
+// - how to Make $size_recommendation = -1 using type casting ?
+
+
