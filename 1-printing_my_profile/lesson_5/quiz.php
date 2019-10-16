@@ -28,7 +28,7 @@
 # create function and pass array as a parameter : array(1,2,3,4), remove number 3 and return the remaining using for loop
 // CODE HERE
 
-# create function and pass two arrays as a parameters: array(1,2,3,4); array(10,20,30,40), merge them and print the result
+# create function and pass two arrays as a parameters: array(1,2,3,4); array(10,20,30,40); , merge them and print the result
 // CODE HERE
 
 # what is the different between include and require - Google it ?
