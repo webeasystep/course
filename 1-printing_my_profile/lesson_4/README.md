@@ -2,7 +2,7 @@
 # Summary
  *  User-defined functions , create - call -params - return
  *  scope meaning - execution order
- *  switch - comparison operators
+ *  switch - operators types
 
 # Resources
 https://www.php.net/manual/en/functions.user-defined.php

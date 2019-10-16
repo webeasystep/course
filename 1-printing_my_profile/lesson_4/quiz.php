@@ -26,4 +26,4 @@
 # use switch to print every array element as a string (key = value) like this : device = computer
 // CODE HERE
 
-# Can we define var before use it - Google it ?
+# Can we use Logical Operators with switch ,how - Google it ?
