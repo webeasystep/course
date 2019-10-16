@@ -5,31 +5,36 @@
  * Date: 2019-07-14
  * Time: 12:42 PM
  */
+$name = "fakhr";
+$age = 25;
+$is_married = true;
+$tall = 178.5;
+$weight = "80";
 
 function format_favorites()
 {
-    $lang_str = "";
+    $fav_str = "";
     $favorites = array('color' => "white", 'drink' => "orange juice");
     foreach ($favorites as $key => $value) {
-        $lang_str .= "(" . $key . "=" . $value . ")" . "-";
+        $fav_str .= "(" . $key . "=" . $value . ")" . "-";
     }
-    return $lang_str;
+    return $fav_str;
 }
 
 function format_languages()
 {
     $languages = array('PHP', 'Mysql', 'Javascript', 'Kotlin');
-    $fav_str = "";
+    $lang_str = "";
     $arrLength = count($languages);
     for ($loopCount = 0; $loopCount < $arrLength; $loopCount++) {
         if (++$loopCount !== $arrLength) {
-            $fav_str .= $languages[$loopCount] . "-";
+            $lang_str .= $languages[$loopCount] . "-";
         } else {
-            $fav_str .= $languages[$loopCount];
+            $lang_str .= $languages[$loopCount];
         }
     }
 
-    return $fav_str;
+    return $lang_str;
 }
 
 function format_size_recommendation($tall, $weight)

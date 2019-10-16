@@ -2,25 +2,35 @@
 <html>
 <head>
     <title>Printing My Profile</title>
+    <style>
+        ul {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margins */
+        }
+
+        ul li {
+            border: 1px solid #ddd; /* Add a thin border to each list item */
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6; /* Add a grey background color */
+            padding: 12px; /* Add some padding */
+        }
+    </style>
 </head>
 <body>
-<?php
-include "functions.php";
-$name = "fakhr";
-$age = 25;
-$is_married = true;
-$tall = 178.5;
-$weight = "80";
-?>
+<?php include "functions.php"; ?>
+<h2>Personal Profile</h2>
 
-<p>Name: <?= $name ?></p>
-<p>Age: <?= $age ?> </p>
-<p>Tall: <?= $tall ?></p>
-<p>weight: <?= $weight ?></p>
-<p>size Recommendation: <?= format_size_recommendation($tall, $weight) ?></p>
-<p>is_married:<?= $is_married ?> </p>
-<p>Languages: <?= format_languages() ?></p>
-<p>Favorites: <?= format_favorites() ?></p>
+<ul>
+    <li><b>Name:</b> <?= $name ?></li>
+    <li><b>Age:</b> <?= $age ?></li>
+    <li><b>Tall:</b> <?= $tall ?></li>
+    <li><b>Weight:</b> <?= $weight ?></li>
+    <li><b>Size Recommendation:</b> <?= format_size_recommendation($tall, $weight) ?></li>
+    <li><b>Is married:</b> <?= $is_married == true ? "Yes" : "NO" ; ?></li>
+    <li><b>Languages:</b> <?= format_languages() ?></li>
+    <li><b>Favorites:</b> <?= format_favorites() ?></li>
+</ul>
 
 </body>
 </html>
