@@ -21,19 +21,18 @@ function format_favorites()
     return $fav_str;
 }
 
-function format_languages()
-{
+function format_languages(){
     $languages = array('PHP', 'Mysql', 'Javascript', 'Kotlin');
     $lang_str = "";
-    $arrLength = count($languages);
-    for ($loopCount = 0; $loopCount < $arrLength; $loopCount++) {
-        if (++$loopCount !== $arrLength) {
-            $lang_str .= $languages[$loopCount] . "-";
-        } else {
-            $lang_str .= $languages[$loopCount];
+    $arrCount = count($languages);
+    $loopCount = 0;
+    foreach ($languages as $language) {
+        if(++$loopCount !== $arrCount) {
+            $lang_str .= $language ."-";
+        }else{
+            $lang_str .= $language;
         }
     }
-
     return $lang_str;
 }
 
@@ -56,4 +55,12 @@ function format_size_recommendation($tall, $weight)
         default:
             return "Normal Best weight";
     }
+}
+
+function format_best_numbers(){
+    $best_num = "";
+    for ($i = 50 ; $i <= 100 ; $i+=10){
+         $best_num.= $i ."-";
+    }
+    return $best_num ;
 }

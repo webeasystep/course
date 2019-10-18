@@ -30,6 +30,7 @@
     <li><b>Is married:</b> <?= $is_married == true ? "Yes" : "NO" ; ?></li>
     <li><b>Languages:</b> <?= format_languages() ?></li>
     <li><b>Favorites:</b> <?= format_favorites() ?></li>
+    <li><b>Best Numbers:</b> <?= format_best_numbers() ?></li>
 </ul>
 
 </body>
