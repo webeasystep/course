@@ -1,5 +1,6 @@
 # Summary
  *  file system functions (fopen,feof,fgets,file,file_put_contents,file_exists)
+ *  CRUD operations concept
  *  how to read documentations
  *  using while
  *  recourse data type
