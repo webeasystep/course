@@ -9,8 +9,8 @@
 # remove number 3 from array(1,2,3,4,5,6,7,8,9,10) using unset function and print it after remove
 // CODE HERE
 
-# loop using while to print preceding array as 1_2_4_5 using while , break and continue
-
+# loop using while to print preceding array as 1_2_4_5 , break and continue
+// CODE HERE
 
 # loop using while to print numbers from 0 to 10 using while and Incrementing Operators (++)
 // CODE HERE
