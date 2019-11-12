@@ -10,7 +10,6 @@
 
 # client want to show list of data and has the ability to delete any line
 # improve code readability and maintainability
-
 if(isset($_GET['delete'])){
     $id = $_GET['id'];
     delete($id);

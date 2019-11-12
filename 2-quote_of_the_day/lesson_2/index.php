@@ -9,7 +9,7 @@
 include "functions.php" ;
     $quotes = read();
  ?>
-<table>
+<table border="1">
     <thead>
     <td>Name</td>
     <td>Options</td>

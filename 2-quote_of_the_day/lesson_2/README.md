@@ -3,8 +3,9 @@
  * Using functions to organize
  * Implementing for CRUD operations
  * Why read doesn't work ? == you need return
+ * what's Superglobals and predefined variables
  * Using $_GET to handle delete and handle $_GET with isset function
- * header function to redirect
+ * network functions and header function to redirect
 
 # Resources
 https://www.php.net/manual/en/function.return.php
