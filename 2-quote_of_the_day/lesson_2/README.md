@@ -1,8 +1,9 @@
 
 # Summary
  * Using functions to organize
+ * Implementing for CRUD operations
  * Why read doesn't work ? == you need return
- * Using $_GET to handle delete and handle get with isset function
+ * Using $_GET to handle delete and handle $_GET with isset function
  * header function to redirect
 
 # Resources

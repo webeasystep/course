@@ -6,7 +6,10 @@
  * Time: 4:47 PM
  */
 
-# print from 10 to -9 using for loop
+# use while to print numbers from 10 to -9
+// CODE HERE
+
+# how to use $_GET with update function to send a param to update data rather than "John Daa"
 // CODE HERE
 
 # redirect to google.com using header

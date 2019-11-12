@@ -5,13 +5,17 @@
  * Date: 2019-07-14
  * Time: 5:19 PM
  */
-// read // write // delete /edit
-# the problem with arrays it's not suitable for hard coded large data
+
+                                // read // write // delete // edit
+
+# client want to show list of data and has the ability to delete any line
+# improve code readability and maintainability
 
 if(isset($_GET['delete'])){
     $id = $_GET['id'];
     delete($id);
 }
+
 function create(){
     #example 3 append to the file
     $afile = fopen("quotes.txt", "a");
@@ -30,7 +34,7 @@ function read(){
 }
 function update(){
     #example 5 edit specific line from file
-    $filename = "quote.txt";
+    $filename = "quotes.txt";
     $remove_line = "John Doe";
     if (!file_exists("quote.txt")) {
         die("File not found");
