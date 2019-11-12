@@ -9,10 +9,13 @@
 # use while to print numbers from 10 to -9
 // CODE HERE
 
-# how to use $_GET with update function to send a param to update data rather than "John Daa"
+# use for loop to print numbers from 10 to -9
 // CODE HERE
 
-# redirect to google.com using header
+# use foreach to print array numbers from 10 to -9
+// CODE HERE
+
+# how to use $_GET with update function to send a param to update data rather than "John Daa"
 // CODE HERE
 
 # redirect to google.com using header

@@ -1,8 +1,7 @@
 
 # Summary
- * Using functions to organize
+ * Using functions to organize code
  * Implementing for CRUD operations
- * Why read doesn't work ? == you need return
  * what's Superglobals and predefined variables
  * Using $_GET to handle delete and handle $_GET with isset function
  * network functions and header function to redirect
