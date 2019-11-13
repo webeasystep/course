@@ -5,8 +5,10 @@
  * Date: 2019-07-14
  * Time: 5:19 PM
  */
-// read // write // delete /edit
-# the problem with arrays it's not suitable for hard coded large data
+                                    // read // write // delete /edit
+
+# improve Crud operation
+
 if (isset($_REQUEST['delete'])) {
     $id = $_REQUEST['id'];
     delete($id);
@@ -61,7 +63,6 @@ function edit($id)
 
 function update()
 {
-    // @todo complete
     #example 5 edit specific line from file
     $filename = "quotes.txt";
     $updated_line = $_REQUEST['quote'];

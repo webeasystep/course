@@ -13,7 +13,7 @@ include "functions.php" ;
     <input type="text" name="quote" value="">
     <button type="submit" name="create" value="1">Submit</button>
 </form>
-<table>
+<table border="1">
     <thead>
     <td>Name</td>
     <td>Options</td>
