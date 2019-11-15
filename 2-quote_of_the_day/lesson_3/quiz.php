@@ -6,9 +6,9 @@
  * Time: 4:47 PM
  */
 
-# Add  for loop instead of while in read function
+# User for loop instead of while in read function
 
-# Add  file_exists into other functions like update function to check file exist
+# Add file_exists into other functions like update function to check file exist
 
 # Change read function to show only 10 lines in the quotes list
 
