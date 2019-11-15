@@ -46,7 +46,7 @@ function create()
 {
     #example 3 append to the file
     $afile = fopen("quotes.txt", "a");
-    $txt = PHP_EOL . $_REQUEST['quote'];
+    $txt = PHP_EOL . $_POST['quote'];
     fwrite($afile, $txt);
     fclose($afile);
     header('Location: ' . 'index.php');
