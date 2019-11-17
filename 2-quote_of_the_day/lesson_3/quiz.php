@@ -12,15 +12,15 @@
 
 # Change read function to show only 10 lines in the quotes list
 
-# Change read function to read lines from bottom to above
+# Change read function to read lines from bottom to above order
 
 # add numbers of quotes on the bottom of index.php file into table footer tag
 
-# Use switch instead of if elseif to check $_REQUEST values
+# Use switch instead of (if elseif) to check $_REQUEST values
 
 # add reset button under submit button and try to click it to show what happens
 
-# Add checkbox to the quotes list ,add delete_all function and try to delete check quotes
+# Add checkbox to the quotes list ,add bulk_delete function and try to delete check quotes
 
 # HINT use this keywords to search :
 # Delete multiple rows by selecting checkboxes using PHP
