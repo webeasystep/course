@@ -6,7 +6,7 @@
  * Time: 4:47 PM
  */
 
-# User for loop instead of while in read function
+# Use for loop instead of while in read function
 
 # Add file_exists into other functions like update function to check file exist
 
