@@ -5,6 +5,7 @@
  * where to add session_start , session_destroy and why ?
  * file input and why should use multipart and post with files
  * issue with handle upload files with 100000 + issue with adding date
+ * change some of your local server setting limitations 
 
 # Resources
 https://www.php.net/manual/en/function.pathinfo.php

@@ -18,8 +18,10 @@
 
 # Use switch instead of if elseif to check $_REQUEST values
 
+# add reset button under submit button and try to click it to show what happens
+
 # Add checkbox to the quotes list ,add delete_all function and try to delete check quotes
-#
+
 # HINT use this keywords to search :
 # Delete multiple rows by selecting checkboxes using PHP
 # PHP table bulk action delete

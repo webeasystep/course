@@ -7,7 +7,8 @@
  */
 session_start();
 
-# the problem with writing many lines manually so will use upload
+# client still have to add line by line manually but how about adding multiple lines ?
+
 if (isset($_REQUEST['delete'])) {
     $id = $_REQUEST['id'];
     delete($id);
@@ -43,9 +44,12 @@ function delete($id = NULL)
 
 function import_quotes()
 {
-    #step one check the file if not empty and it's extension txt
-    #step two read all data from file and convert it to array
-    #step three add all lines to the current file
+    #step one check the if the request POST has sent,
+    #step two check the if there is a file with the your restrictions and no error
+    #step three read all data from file and convert it to array
+    #step four add all lines to the current file
+    #step five redirect to the index page
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $ext = pathinfo($_FILES["quotes"]["name"], PATHINFO_EXTENSION);
