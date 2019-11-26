@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <title>Quote of the day</title>
 </head>
 <body>
@@ -14,7 +15,7 @@ $quotes = read();
     <input type="file" name="quotes">
     <div id='alert'>
         <div class=' alert alert-block alert-info fade in center'>
-            <?= isset($_SESSION['message']) ? $_SESSION['message'] : "";; ?>
+            <?= isset($_SESSION['message']) ? $_SESSION['message'] : ""; ?>
         </div>
     </div>
     <button type="submit" name="upload" value="1">Submit</button>
@@ -37,7 +38,7 @@ $quotes = read();
     <?php }
     session_unset();
 
-    session_destroy();; ?>
+    session_destroy(); ?>
 
 </table>
 
