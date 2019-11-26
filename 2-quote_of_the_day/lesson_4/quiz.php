@@ -25,6 +25,5 @@
 # 5- change delete function to be able to delete images
 
 
-
 #Hints
 # for step 4 you could use files functions to read image names ,and save it into array
