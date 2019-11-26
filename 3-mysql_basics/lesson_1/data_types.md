@@ -1,16 +1,17 @@
     ########################################### Numeric Data Types #######################################
 
-    - MySQL uses all the standard ANSI SQL numeric data types,
-    so if you're coming to MySQL from a different database system, these definitions will look familiar to you.
-     The following list shows the common numeric data types and their descriptions
+    - MySQL uses all the standard  SQL numeric data types
 
     ########################
     # INT
     ########################
-     A normal-sized integer that can be signed or unsigned. If signed,
-     the allowable range is from -2147483648 to 2147483647.
+     A normal-sized integer that can be signed or unsigned. 
+     If signed,the allowable range is from -2147483648 to 2147483647.
      If unsigned, the allowable range is from 0 to 4294967295.
-     You can specify a width of up to 11 digits.
+     You can specify a width of up to 11 digits(with zerofill).
+     CREATE TABLE yourtable (x INT(8) ZEROFILL NOT NULL, y INT(8) NOT NULL)
+     INSERT INTO yourtable (x,y) VALUES (1, 1), (12, 12), (123, 123), (123456789, 123456789)
+
     ########################
     # TINYINT
     ########################
@@ -24,44 +25,45 @@
     A small integer that can be signed or unsigned.
     If signed, the allowable range is from -32768 to 32767.
     If unsigned, the allowable range is from 0 to 65535.
-     You can specify a width of up to 5 digits.
+    You can specify a width of up to 5 digits.
 
     ########################
     # MEDIUMINT
     ########################
     A medium-sized integer that can be signed or unsigned.
     If signed, the allowable range is from -8388608 to 8388607.
-    If unsigned, the allowable range is from 0 to 16777215. You can specify a width of up to 9 digits.
+    If unsigned, the allowable range is from 0 to 16777215.
+    You can specify a width of up to 9 digits.
     ########################
     # BIGINT
     ########################
     A large integer that can be signed or unsigned.
     If signed, the allowable range is from -9223372036854775808 to 9223372036854775807.
     If unsigned, the allowable range is from 0 to 18446744073709551615.
-     You can specify a width of up to 20 digits.
+    You can specify a width of up to 20 digits.
     ########################
-    # FLOAT(M,D)
+    # FLOAT(L,D)
     ########################
-    A floating-point number that cannot be unsigned. You can define the display length (M)
-    and the number of decimals (D). This is not required and will default to 10,2,
+    A floating-point number that cannot be unsigned.
+     You can define the display length (L)  and the number of decimals (D).
+     This is not required and will default to 10,2,
      where 2 is the number of decimals and 10 is the total number of digits (including decimals).
      Decimal precision can go to 24 places for a FLOAT.
     ########################
-    # DOUBLE(M,D)
+    # DOUBLE(L,D)
     ########################
     A double precision floating-point number that cannot be unsigned.
-    You can define the display length (M) and the number of decimals (D).
-     This is not required and will default to 16,4, where 4 is the number of decimals.
-      Decimal precision can go to 53 places for a DOUBLE. REAL is a synonym for DOUBLE.
+    You can define the display length (L) and the number of decimals (D).
+    This is not required and will default to 16,4 where 4 is the number of decimals.
+    Decimal precision can go to 53 places for a DOUBLE. REAL is a synonym for DOUBLE.
     ########################
-    # DECIMAL(M,D)
+    # DECIMAL(L,D)
     ########################
     An unpacked floating-point number that cannot be unsigned. In the unpacked decimals,
     each decimal corresponds to one byte.
-    Defining the display length (M) and the number of decimals (D) is required.
-    NUMERIC is a synonym for DECIMAL.
-
-    ################################## Date and Time Types ###############################################
+    Defining the display length (L) and the number of decimals (D) is required.
+    We use DECIMAL data type  where we do not want precision but exact and accurate values
+       ################################## Date and Time Types ###############################################
 
 The MySQL date and time datatypes are as follows −
 
