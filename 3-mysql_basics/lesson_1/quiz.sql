@@ -16,7 +16,7 @@
 
 # What is the best data type and size to save product serial number ?
 ## CODE HERE
-#
+
 # What is the best data type and size to save your email address ?
 ## CODE HERE
 
