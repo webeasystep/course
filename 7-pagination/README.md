@@ -8,9 +8,4 @@
  * Using modulo (%) operator
 
 # Resources
-
-
-# Quiz
-
-
-
+https://www.php.net/manual/en/book.pdo.php

@@ -8,6 +8,3 @@
  * using mysqli_num_rows and mysqli_fetch_assoc
 
 # Resources
-
-
-# Quiz
