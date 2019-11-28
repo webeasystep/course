@@ -18,7 +18,7 @@ CREATE TABLE customers
 #########################
 # Create order items table
 #########################
-CREATE TABLE orderitems
+CREATE TABLE order_items
 (
   order_num  int          NOT NULL ,
   order_item int          NOT NULL ,
@@ -69,9 +69,9 @@ CREATE TABLE vendors
 ) ENGINE=InnoDB;
 
 ###########################
-# Create productnotes table
+# Create product_notes table
 ###########################
-CREATE TABLE productnotes
+CREATE TABLE product_notes
 (
   note_id    int           NOT NULL AUTO_INCREMENT,
   prod_id    char(10)      NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE productnotes
 #####################
 # Define foreign keys
 #####################
-ALTER TABLE orderitems ADD CONSTRAINT fk_orderitems_orders FOREIGN KEY (order_num) REFERENCES orders (order_num);
-ALTER TABLE orderitems ADD CONSTRAINT fk_orderitems_products FOREIGN KEY (prod_id) REFERENCES products (prod_id);
+ALTER TABLE order_items ADD CONSTRAINT fk_order_items_orders FOREIGN KEY (order_num) REFERENCES orders (order_num);
+ALTER TABLE order_items ADD CONSTRAINT fk_order_items_products FOREIGN KEY (prod_id) REFERENCES products (prod_id);
 ALTER TABLE orders ADD CONSTRAINT fk_orders_customers FOREIGN KEY (cust_id) REFERENCES customers (cust_id);
 ALTER TABLE products ADD CONSTRAINT fk_products_vendors FOREIGN KEY (vend_id) REFERENCES vendors (vend_id);

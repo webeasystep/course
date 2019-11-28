@@ -20,6 +20,9 @@
 # What is the best data type and size to save your email address ?
 ## CODE HERE
 
+# What is the best data type and size to save your Article Content ?
+## CODE HERE
+
 # is it applicable to save interview date and time into varchar  ?
 ## CODE HERE
 
