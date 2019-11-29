@@ -27,8 +27,8 @@ CREATE TABLE customers
 # Used for number types, limits the stored data to positive numbers and zero
 
 #  PRIMARY KEY
-# Used to uniquely identify the rows in a table. The column with PRIMARY KEY setting is often an ID number,
-#  and is often used with AUTO_INCREMENT
+# Used to uniquely identify the rows in a table.
+# The column with PRIMARY KEY setting is often an ID number,and is often used with AUTO_INCREMENT
 
 # AUTO INCREMENT
 # MySQL automatically increases the value of the field by 1 each time a new record is added

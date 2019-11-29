@@ -8,3 +8,6 @@
 - INSERT – insert data into a table
 - UPDATE – updates existing data within a table
 - DELETE – Delete all records from a database table
+
+# Resources
+https://www.splessons.com/lesson/mysql-dml/

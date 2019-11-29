@@ -1,12 +1,6 @@
 
 ####################################### Sorting Retrieved Data  ###################################
 
-# data is typically displayed in the order in which it appears in the underlying tables.
-# This could be the order in which the data was added to the tables initially. However,
-# if data was subsequently updated or deleted,
-# the order is affected by how MySQL reuses reclaimed storage space.
-# The end result is that you cannot (and should not) rely on the sort order if you do not explicitly control it.
-
 # sort the data alphabetically by the prod_name column
 SELECT prod_name FROM products ORDER BY prod_name;
 
