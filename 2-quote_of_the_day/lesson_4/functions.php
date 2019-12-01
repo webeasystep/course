@@ -8,6 +8,7 @@
 session_start();
 
 # client still have to add line by line manually but how about adding multiple lines ?
+# client need to validate actions and see response ?
 
 if (isset($_REQUEST['delete'])) {
     $id = $_REQUEST['id'];
@@ -44,8 +45,8 @@ function delete($id = NULL)
 
 function import_quotes()
 {
-    #step one check the if the request POST has sent,
-    #step two check the if there is a file with the your restrictions and no error
+    #step one check  if the request POST has sent,
+    #step two check  if there is a file with your restrictions and no error
     #step three read all data from file and convert it to array
     #step four add all lines to the current file
     #step five redirect to the index page
