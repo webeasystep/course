@@ -38,8 +38,10 @@ ALTER TABLE vehicles
 
 ALTER TABLE vehicles
 RENAME TO cars;
-RENAME TABLE
-    vehicles TO cars;
+-- short rename
+RENAME TABLE  vehicles TO cars;
+####################################### ALTER COMMENT TABLE #######################################
+ALTER TABLE vehicles COMMENT = 'Customer information';
 
 ####################################### ALTER DROP COLUMN #######################################
 ALTER TABLE vehicles
