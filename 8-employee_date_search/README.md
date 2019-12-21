@@ -8,3 +8,4 @@
  * using mysqli_num_rows and mysqli_fetch_assoc
 
 # Resources
+https://www.php.net/manual/en/book.mysqli.php
