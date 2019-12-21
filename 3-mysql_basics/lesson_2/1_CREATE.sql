@@ -4,18 +4,17 @@ CREATE TABLE customers
 (
   cust_id      int          NOT NULL AUTO_INCREMENT PRIMARY KEY,
   cust_name    VARCHAR(50)  NOT NULL,
-  cust_address VARCHAR(50)  NULL,
-  cust_city    VARCHAR(50)  NULL,
-  cust_state   VARCHAR(5)   NULL,
-  cust_zip     VARCHAR(10)  NULL,
-  cust_country VARCHAR(50)  NULL,
-  cust_contact VARCHAR(50)  NULL,
-  cust_email   VARCHAR(255) NULL,
-  reg_date     TIMESTAMP             DEFAULT CURRENT_TIMESTAMP
+  cust_address VARCHAR(50)  NOT NULL,
+  cust_city    VARCHAR(50)  NOT NULL,
+  cust_state   VARCHAR(5)       NULL,
+  cust_zip     VARCHAR(10)  NOT NULL,
+  cust_country VARCHAR(50)  NOT NULL,
+  cust_contact VARCHAR(50)  NOT NULL,
+  cust_email   VARCHAR(255) NOT NULL,
+  is_active    TINYINT(1) UNSIGNED NOT NULL DEFAULT '0',
+  reg_date     TIMESTAMP   DEFAULT CURRENT_TIMESTAMP
   ON UPDATE CURRENT_TIMESTAMP
-  (cust_id)
-)
-  ENGINE = InnoDB;
+) ENGINE = InnoDB;
 
 # NOT NULL
 # Each row must contain a value for that column, null values are not allowed

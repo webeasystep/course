@@ -2,6 +2,7 @@
 - what's is database,sql,mysql ?
 - what's the sql two components ?
 - what's the main mysql data types ?
+- install PhpMyAdmin
 - what's database objects?
 
 # Resources
