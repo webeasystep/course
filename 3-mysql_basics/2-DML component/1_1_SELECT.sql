@@ -9,7 +9,7 @@ SELECT prod_id, prod_name, prod_price FROM products;
 SELECT * FROM products;
 
 -- Retrieving Distinct Rows
-SELECT DISTINCT vend_id FROM products;;
+SELECT DISTINCT vend_id FROM products;
 
 -- Limiting Results
  ## get 5 rows only

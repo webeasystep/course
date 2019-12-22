@@ -2,7 +2,7 @@ CREATE DATABASE mysql_basics;
 
 CREATE TABLE customers
 (
-  cust_id      int          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  cust_id      INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
   cust_name    VARCHAR(50)  NOT NULL,
   cust_address VARCHAR(50)  NOT NULL,
   cust_city    VARCHAR(50)  NOT NULL,

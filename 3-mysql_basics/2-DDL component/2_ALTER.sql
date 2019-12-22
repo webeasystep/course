@@ -1,8 +1,8 @@
-CREATE TABLE vehicles (
-  vehicleId INT,
+CREATE TABLE cars (
+  id INT,
   year      INT          NOT NULL,
-  make      VARCHAR(100) NOT NULL,
-  PRIMARY KEY (vehicleId)
+  brand      VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 /* -------------------------
@@ -14,35 +14,36 @@ CREATE TABLE vehicles (
 
 ####################################### ALTER ADD COLUMN #######################################
 -- Add a column
-ALTER TABLE vehicles
+ALTER TABLE cars
   ADD model VARCHAR(100) NOT NULL;
 
 -- Add multiple columns
-ALTER TABLE vehicles
+ALTER TABLE cars
   ADD color VARCHAR(50),
   ADD note VARCHAR(255);
 
 ####################################### ALTER Modify COLUMN #######################################
 -- Modify a column
-ALTER TABLE vehicles
+ALTER TABLE cars
   MODIFY note VARCHAR(100) NOT NULL;
 -- Modify multiple columns
-ALTER TABLE vehicles
+ALTER TABLE cars
   MODIFY year SMALLINT NOT NULL,
   MODIFY color VARCHAR(20) NULL
-  AFTER make;
+  AFTER brand;
 
 ####################################### ALTER RENAME COLUMN #######################################
-ALTER TABLE vehicles
-  CHANGE COLUMN note vehicleCondition VARCHAR(100) NOT NULL;
+ALTER TABLE cars
+  CHANGE COLUMN note car_condition VARCHAR(100) NOT NULL;
 
-ALTER TABLE vehicles
+ALTER TABLE cars
 RENAME TO cars;
 -- short rename
-RENAME TABLE  vehicles TO cars;
-####################################### ALTER COMMENT TABLE #######################################
-ALTER TABLE vehicles COMMENT = 'Customer information';
+RENAME TABLE  cars TO cars;
 
 ####################################### ALTER DROP COLUMN #######################################
-ALTER TABLE vehicles
-  DROP COLUMN vehicleCondition;
+ALTER TABLE cars
+  DROP COLUMN car_condition;
+
+####################################### ALTER COMMENT TABLE #######################################
+ALTER TABLE cars COMMENT = 'Customer information';
