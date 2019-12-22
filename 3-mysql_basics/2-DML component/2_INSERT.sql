@@ -34,6 +34,21 @@ VALUES  (
           'USA'
           );
 ########################### Inserting Retrieved Data ###############################
+
+CREATE TABLE custnew
+(
+    cust_id      INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cust_name    VARCHAR(50)  NOT NULL,
+    cust_address VARCHAR(50)  NOT NULL,
+    cust_city    VARCHAR(50)  NOT NULL,
+    cust_state   VARCHAR(5)       NULL  COMMENT 'USA State only',
+    cust_zip     VARCHAR(10)  NOT NULL,
+    cust_country VARCHAR(50)  NOT NULL,
+    cust_contact VARCHAR(50)  NOT NULL,
+    cust_email   VARCHAR(255) NOT NULL
+) ENGINE=INNODB  ;
+
+
 INSERT INTO customers(cust_id,
                       cust_contact,
                       cust_email,

@@ -80,3 +80,11 @@ CREATE TABLE product_notes
   PRIMARY KEY(note_id),
   FULLTEXT(note_text)
 ) ENGINE=MyISAM;
+
+#####################
+# Define foreign keys
+#####################
+ALTER TABLE order_items ADD CONSTRAINT fk_orderitems_orders FOREIGN KEY (order_num) REFERENCES orders (order_num);
+ALTER TABLE order_items ADD CONSTRAINT fk_orderitems_products FOREIGN KEY (prod_id) REFERENCES products (prod_id);
+ALTER TABLE orders ADD CONSTRAINT fk_orders_customers FOREIGN KEY (cust_id) REFERENCES customers (cust_id);
+ALTER TABLE products ADD CONSTRAINT fk_products_vendors FOREIGN KEY (vend_id) REFERENCES vendors (vend_id);

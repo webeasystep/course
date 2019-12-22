@@ -21,3 +21,8 @@ FROM customers LEFT OUTER JOIN orders
 SELECT customers.cust_id, orders.order_num
 FROM customers RIGHT OUTER JOIN orders
          ON orders.cust_id = customers.cust_id;
+
+CREATE TABLE customers (
+                           customer_id INT AUTO_INCREMENT PRIMARY KEY,
+                           customer_name VARCHAR(100)
+);

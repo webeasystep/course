@@ -11,3 +11,4 @@
 
 # Resources
 https://www.splessons.com/lesson/mysql-dml/
+https://www.geeksforgeeks.org/mysql-operator-precedence/

@@ -21,9 +21,9 @@
 # remove "first_name" and "last_name" columns from students table
 ## CODE HERE
 
-# What DROP can remove ?
+# ADD comment to phone_number column ?
 ## CODE HERE
 
-# What is the difference between drop and truncate ?
+# add created_at and updated_at column with timestamp and make update_at auto updated  ?
 ## CODE HERE
 

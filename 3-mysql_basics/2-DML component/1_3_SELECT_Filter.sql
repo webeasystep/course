@@ -23,17 +23,17 @@ WHERE vend_id = 1002 OR vend_id = 1003;
 # Understanding Order of Evaluation (operator precedence )
 # Two of the rows returned have prices less than 10
 # SQL (like most languages) processes AND operators before OR operators
-SELECT prod_name, prod_price
+SELECT vend_id,prod_name, prod_price
 FROM products
 WHERE vend_id = 1002 OR vend_id = 1003 AND prod_price >= 10;
 
 # Using the IN Operator
-SELECT prod_name, prod_price
+SELECT vend_id,prod_name, prod_price
 FROM products
 WHERE vend_id IN (1002,1003)
 ORDER BY prod_name;
 
-SELECT prod_name, prod_price
+SELECT vend_id,prod_name, prod_price
 FROM products
 WHERE vend_id NOT IN (1002,1003)
 ORDER BY prod_name;
@@ -41,14 +41,14 @@ ORDER BY prod_name;
 # Using Wildcard Filtering
 # to find all products that start with the word jet,
 
-SELECT prod_id, prod_name
+SELECT vend_id,prod_id, prod_name
 FROM products
 WHERE prod_name LIKE 'jet%';
 
 # match any value that contains the text anvil anywhere within it,
 # regardless of any characters before or after that text.
 
-SELECT prod_id, prod_name
+SELECT vend_id,prod_id, prod_name
 FROM products
 WHERE prod_name LIKE '%anvil%';
 
