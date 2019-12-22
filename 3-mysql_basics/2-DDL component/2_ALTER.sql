@@ -30,20 +30,22 @@ ALTER TABLE cars
 ALTER TABLE cars
   MODIFY year SMALLINT NOT NULL,
   MODIFY color VARCHAR(20) NULL
-  AFTER brand;
+  AFTER brand  ;
+-- FIRST  ;
 
 ####################################### ALTER RENAME COLUMN #######################################
 ALTER TABLE cars
   CHANGE COLUMN note car_condition VARCHAR(100) NOT NULL;
 
 ALTER TABLE cars
-RENAME TO cars;
+RENAME TO car;
 -- short rename
-RENAME TABLE  cars TO cars;
+RENAME TABLE  car TO cars;
 
 ####################################### ALTER DROP COLUMN #######################################
 ALTER TABLE cars
   DROP COLUMN car_condition;
 
 ####################################### ALTER COMMENT TABLE #######################################
-ALTER TABLE cars COMMENT = 'Customer information';
+ALTER TABLE cars
+    COMMENT = 'Customer information';
