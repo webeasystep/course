@@ -21,26 +21,17 @@ INSERT INTO `comments` (`comment_id`, `user_id`, `comment_date`, `message`) VALU
 
 
 --
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
-
-
-
---
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
-                         `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-                         `username` varchar(40) NOT NULL,
-                         `firstname` varchar(40) NOT NULL,
-                         `password` varchar(40) NOT NULL,
-                         `emailid` varchar(40) NOT NULL,
-                         `createdon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                         `usertype` varchar(50) NOT NULL DEFAULT 'normal'
+ `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ `username` varchar(40) NOT NULL,
+ `firstname` varchar(40) NOT NULL,
+ `password` varchar(40) NOT NULL,
+ `emailid` varchar(40) NOT NULL,
+ `createdon` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ `usertype` varchar(50) NOT NULL DEFAULT 'normal'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

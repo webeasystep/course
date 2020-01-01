@@ -6,7 +6,7 @@ date_default_timezone_set('Africa/Nairobi');
 include 'db.php';
 
 //Include functions page file
-include 'comments.php';
+include 'functions.php';
 
 //Starts the session
 session_start();

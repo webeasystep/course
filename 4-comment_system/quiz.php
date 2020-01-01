@@ -12,4 +12,5 @@
 # Step 4 : add a required attribute to prevent empty data (client side validation )
 # Step 5 : add a validation using php functions to prevent empty data (server side validation)
 # Step 6 : make while loop through every comment as a table rows not a div
+# Step 7 : add a new user with arabic name , and it's correctly inserted
 

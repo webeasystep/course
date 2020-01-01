@@ -34,13 +34,13 @@ function check_login()
     }
 }
 
-//user login
+//check if user registered,his data(username,password) is correct ,if yes set  session and cookie
 function user_login($username, $password)
 {
-    if (user_exists($username) == FALSE) {
+    if (user_exists($username) == FALSE) { // check if user exists
         return "You are not a registered member";
     }
-    else if (confirm_user($username, md5($password)) === FALSE) {
+    else if (confirm_user($username, md5($password)) === FALSE) { // check if login data is correct
         return "Authentication error";
     }
     else {
@@ -49,6 +49,7 @@ function user_login($username, $password)
         $row = dbFetchAssoc(confirm_user($username, md5($password)));
         $_SESSION['user_id'] = $row['id'];
         $_SESSION['last_login'] = $row['last_login'];
+        // if choose remember_me save his login in the cookie
         if (isset($_POST['remember_me'])) {
             $_SESSION['user_rem'] = $_POST['remember_me'];
             setcookie("cookname", $_SESSION['username'], time() + 60 * 60 * 24 * COOKIE_TIME_OUT);
@@ -69,6 +70,20 @@ function user_login($username, $password)
         header('Location:' . WEB_ROOT . 'index.php');
         exit;
     }
+}
+
+//do user logout
+function user_logout()
+{
+    session_start();
+    $_SESSION = array(); // reset session array
+    session_destroy();   // destroy session.
+    //delete from cookie if expires
+    setcookie("cookname", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
+    setcookie("cookpass", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
+    setcookie("cookrem", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
+    header('Location: ' . WEB_ROOT . 'login.php');
+    exit;
 }
 
 function user_exists($username)
@@ -103,19 +118,7 @@ function confirm_user($username, $password)
     return $result;
 }
 
-//do user logout
-function user_logout()
-{
-    session_start();
-    $_SESSION = array(); // reset session array
-    session_destroy();   // destroy session.
-    //delete from cookie if expires
-    setcookie("cookname", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
-    setcookie("cookpass", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
-    setcookie("cookrem", '', time() - 60 * 60 * 24 * COOKIE_TIME_OUT);
-    header('Location: ' . WEB_ROOT . 'login.php');
-    exit;
-}
+
 
 /*
  * End of common.php

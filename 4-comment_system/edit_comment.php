@@ -6,7 +6,7 @@
 	include 'db.php';
 	
 	//Include functions page file
-	include 'comments.php';
+	include 'functions.php';
 ?>
 
 <!DOCTYPE html>
