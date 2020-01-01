@@ -16,19 +16,16 @@
 # get all rows if quantity under 5 in order_items table and order them from big number to low number
 ## CODE HERE
 
-# get all rows if quantity under 5 in order_items table and order them from big number to low number
-## CODE HERE
-
 # get all rows if product_notes.note_text COLUMN   has the "and" character
 ## CODE HERE
 
-# get all rows if orders.order_num COLUMN   has not values "20005" or "20009"
+# get all rows if orders.order_num COLUMN has not values "20005" or "20009"
 ## CODE HERE
 
-# get all rows if orders.order_date COLUMN where date  after 2005-09-12 and order_num more than 20006
+# get all rows from orders  where order_date greater than 2005-09-12 and order_num more than 20006
 ## CODE HERE
 
-# get all rows if orders.order_items COLUMN  where prod_id has "N" character
+# get all rows from order_items  where prod_id has "N" character
 ## CODE HERE
 
 # get all rows for these related columns (order_num,quantity,item_price,product name,customer name)
@@ -52,6 +49,6 @@
 # try to delete only the last 2 notes from product_notes table
 ## CODE HERE
 
-# how to ge the maximum and minimum price for products table GOOLE IT ?
-# how to ge the total prices for saled items table GOOLE IT ?
+# how to get the maximum and minimum price for products table GOOLE IT ?
+# how to get the total prices for saled items table GOOLE IT ?
 # what is the meaning of aggregate functions  ?

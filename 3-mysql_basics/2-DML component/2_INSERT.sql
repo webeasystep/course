@@ -49,7 +49,7 @@ CREATE TABLE custnew
 ) ENGINE=INNODB  ;
 
 
-INSERT INTO customers(cust_id,
+INSERT INTO custnew(cust_id,
                       cust_contact,
                       cust_email,
                       cust_name,
@@ -67,4 +67,4 @@ INSERT INTO customers(cust_id,
                        cust_state,
                        cust_zip,
                        cust_country
-                FROM custnew;
+                FROM customers;
