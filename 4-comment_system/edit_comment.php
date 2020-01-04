@@ -19,8 +19,6 @@
 </head>
 <body>
 	
-<!--HTML code appearing inside PHP should be in single or double-quotation marks-->	
-<!--Using single quotation marks in PHP makes the code execute faster-->
 <!--Input type hidden means the code will not be viewable on the browser-->
 <!--date()- Displays the date, Y-m-d(Year,Month, Date) H:i:s(Hour, Minute, Second) -->
 <?php

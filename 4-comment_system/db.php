@@ -6,7 +6,7 @@ $username = "root";
 $password = "";
 $database = "demo";
 
-//Connection to database, we use OOP method of connection
+//Connection to database
 $db = new mysqli($servername, $username, $password, $database);
 
 //Returns true if there is NO connection

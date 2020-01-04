@@ -1,6 +1,4 @@
 <?php
-//date_default_timezone_set()- Sets the timezone you want to get the date in
-date_default_timezone_set('Africa/Nairobi');
 
 //Include database connection
 include 'db.php';
@@ -41,7 +39,7 @@ if (isset($_SESSION['id'])) {
     echo "<div class='alert alert-success'>
         <strong>Success!</strong> You are logged in!
         </div>";
-    //In order to see the form inside the PHP code, use echo"";
+    //if logged in see the comment form and logout form
     echo "<form method='post' action='" . setComments($db) . "'>
               <input type='hidden' name='user_id' value='$user_id'>
               <input type='hidden' name='comment_date' value='" . date('Y-m-d H:i:s') . "'>
@@ -57,7 +55,7 @@ if (isset($_SESSION['id'])) {
             </div>
          </form>
 	  ";
-} else {
+} else { // if not logged in see login form
     echo
         "<form class='form-inline' role='form' method='post' action='" . getLogin($db) . "' >
 		    <input type='text' name='user_name'>
@@ -71,7 +69,6 @@ if (isset($_SESSION['id'])) {
 </div>
 
 <div class="row">
-<!--date()- Displays the date, Y-m-d(Year,Month, Date) H:i:s(Hour, Minute, Second) -->
 <?php
 //The function below is used to get comments from the database
 getComments($db);
