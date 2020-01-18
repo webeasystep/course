@@ -25,9 +25,6 @@ function dbFetchRow($result) {
     return mysqli_fetch_row($result);
 }
 
-function dbFreeResult($result) {
-    return mysqli_free_result($result);
-}
 
 function dbNumRows($result) {
     return mysqli_num_rows($result);
@@ -40,11 +37,6 @@ function dbNumFields($result) {
 function dbInsertId() {
     global $dbConn;
     return mysqli_insert_id($dbConn);
-}
-
-function closeConn() {
-    global $dbConn;
-    mysqli_close($dbConn);
 }
 
 /*

@@ -86,6 +86,7 @@ function user_logout()
     exit;
 }
 
+//check if user exist
 function user_exists($username)
 {
     $sql = "SELECT ua.username,ua.username,ua.last_login FROM users ua
@@ -101,6 +102,7 @@ function user_exists($username)
     return $result;
 }
 
+//check if the username and password are correct
 function confirm_user($username, $password)
 {
 
@@ -117,8 +119,6 @@ function confirm_user($username, $password)
 
     return $result;
 }
-
-
 
 /*
  * End of common.php

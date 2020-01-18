@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require 'config.php';
 
 $temp = '';
 $errors = '';
@@ -69,10 +69,10 @@ if (isset($_POST['login'])) {
                     <input class="form-control" type="password" placeholder="Password" name="password" title="Password" tabindex="2"
                            value="<?php echo isset($_COOKIE['cookpass']) ? $_COOKIE['cookpass'] : ''; ?>"/>
 
-                    <button class="btn btn-lg btn-primary btn-block" name="login" value="Login"  type="submit">
-                        Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block" name="login" value="Login"  type="submit">Sign in</button>
                     <label class="checkbox pull-left">
-                        <input type="checkbox" value="remember-me"  value="1" <?php echo isset($_COOKIE['cookrem']) ? 'checked="checked"' : ''; ?>>
+                        <input type="checkbox" value="remember-me"  value="1"
+                        <?php echo isset($_COOKIE['cookrem']) ? 'checked="checked"' : ''; ?>>
                         Remember me
                     </label>
                     <span class="clearfix"></span>

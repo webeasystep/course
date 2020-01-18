@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <!-- Button -->
                         <div class="controls">
-                            <button type="submit" name="submit" value="Register" class="btn btn-success">Login</button>
+                            <button type="submit" name="submit" value="Register" class="btn btn-success">Register</button>
                             <a href="login.php" class="btn btn-info">Back</a>
                         </div>
                     </div>
