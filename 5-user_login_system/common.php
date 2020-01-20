@@ -1,39 +1,5 @@
 <?php
 
-function check_login()
-{
-    /* Check if user has been remembered */
-    if (isset($_COOKIE['cookname'])) {
-        $_SESSION['username'] = $_COOKIE['cookname'];
-    }
-
-    if (isset($_COOKIE['cookpass'])) {
-        $_SESSION['user_pass'] = $_COOKIE['cookpass'];
-    }
-
-    if (isset($_COOKIE['cookrem'])) {
-        $_SESSION['user_rem'] = $_COOKIE['cookrem'];
-    }
-
-    /* Username and password have been set */
-    if (isset($_SESSION['username']) && isset($_SESSION['user_pass'])) {
-        /* Confirm that username and password are valid */
-        if (confirm_user($_SESSION['username'], $_SESSION['user_pass']) === FALSE) {
-            /* Variables are incorrect, user not logged in */
-            unset($_SESSION['username']);
-            unset($_SESSION['user_pass']);
-            unset($_SESSION['user_rem']);
-            return FALSE;
-        }
-        $row = dbFetchAssoc(confirm_user($_SESSION['username'], $_SESSION['user_pass']));
-        $_SESSION['user_id'] = $row['id'];
-        $_SESSION['last_login'] = $row['last_login'];
-        return TRUE;
-    } else {/* User not logged in */
-        return FALSE;
-    }
-}
-
 //check if user registered,his data(username,password) is correct ,if yes set  session and cookie
 function user_login($username, $password)
 {

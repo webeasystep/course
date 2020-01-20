@@ -4,7 +4,7 @@
 		$username = strip_tags($_POST['username']);
 		$password = strip_tags(md5($_POST['password']));
 		$db = mysqli_connect("localhost", "root", "", "demo") or die ("Failed to connect");
-		$query = "INSERT INTO users(username,password,activated) VALUES('$username', '$password','1')";
+		$query = "INSERT INTO users(username,password,activated) VALUES('$username', '$password',1)";
 		$result = mysqli_query($db,$query);
 		if($result) {
 			echo "Successfully registered";
