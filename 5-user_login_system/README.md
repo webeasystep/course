@@ -8,4 +8,4 @@
 - error_reporting functions
 - PHP Options/Info Functions
 - using $_SERVER SuperGlobal
-- Mysqli most common functions (mysqli_fetch_array,mysqli_fetch_assoc,mysqli_fetch_row,,etc)
+- Mysqli most common functions (mysqli_fetch_array,mysqli_fetch_assoc,mysqli_fetch_row ,etc)

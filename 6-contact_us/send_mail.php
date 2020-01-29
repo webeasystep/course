@@ -31,10 +31,10 @@ if (isset($_POST['submit'])) {
 	 ' . $message . '	
 	|---------END MESSAGE----------|';
     echo "Thank you fo your feedback. I will contact you shortly if needed.<br/>
-    Go to <a href='/index.php'>Home Page</a>";
+    Go to <a href='index.php'>Home Page</a>";
     mail($to, $subject, $body, $headers);
 } else {
     echo "You must write a message. </br> 
-    Please go to <a href='/index.php'>Home Page</a>";
+    Please go to <a href='index.php'>Home Page</a>";
 }
 
