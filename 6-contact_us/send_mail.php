@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     $subject = htmlspecialchars(stripslashes(trim($_POST['subject'])));
     $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
     $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
-    if (!preg_match("/^[A-Za-z .'-]+$/", $name)) {
+    if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
         $name_error = 'Invalid name';
     }
     if (!preg_match("/^[A-Za-z .'-]+$/", $subject)) {

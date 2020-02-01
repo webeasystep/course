@@ -11,7 +11,7 @@ session_start(); ?>
 
       <fieldset>
 
-      <select  >
+      <select>
           <option value="0">--Choose Priority --</option>
           <option value="1">High</option>
           <option value="2">Medium</option>
